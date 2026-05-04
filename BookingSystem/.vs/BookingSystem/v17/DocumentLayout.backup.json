@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\timei\\source\\repos\\Sab1ckk\\BookingHallSystem\\BookingSystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|c:\\users\\timei\\source\\repos\\sab1ckk\\bookinghallsystem\\bookingsystem\\bookingsystem\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|solutionrelative:bookingsystem\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|c:\\users\\timei\\source\\repos\\sab1ckk\\bookinghallsystem\\bookingsystem\\bookingsystem\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|solutionrelative:bookingsystem\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 288,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\timei\\source\\repos\\Sab1ckk\\BookingHallSystem\\BookingSystem\\BookingSystem\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "BookingSystem\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\timei\\source\\repos\\Sab1ckk\\BookingHallSystem\\BookingSystem\\BookingSystem\\MainWindow.xaml",
+              "RelativeToolTip": "BookingSystem\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-04T00:33:01.533Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\timei\\source\\repos\\Sab1ckk\\BookingHallSystem\\BookingSystem\\BookingSystem\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "BookingSystem\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\timei\\source\\repos\\Sab1ckk\\BookingHallSystem\\BookingSystem\\BookingSystem\\MainWindow.xaml.cs",
+              "RelativeToolTip": "BookingSystem\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-04T00:33:01.48Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
