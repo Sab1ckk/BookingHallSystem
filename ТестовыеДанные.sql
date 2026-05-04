@@ -23,10 +23,13 @@ INSERT INTO EventTypes (Name) VALUES
 GO
 
 -- 3. Заполнение Employees (Сотрудники)
-INSERT INTO Users (EmployeeId, Login, PasswordHash, Role) VALUES 
-(1, 'admin', '25f43b1486ad95a1398e3eeb3d83bc4010015fcc9bedb35b432e00298d5021f7', 'Admin'),
-(2, 'elena', '0ce93c9606f0685bf60e051265891d256381f639d05c0aec67c84eec49d33cc1', 'Manager'),
-(3, 'alexey', '2f38250872acde70afec463d4fffb05def835771ca29b7abe1cb62286944637b', 'Employee');
+INSERT INTO Employees (LastName, FirstName, Patronymic, PositionId, ContactInfo) VALUES 
+('Иванов', 'Иван', 'Иванович', 1, 'ivanov@example.com; +7-999-123-4567'),
+('Петрова', 'Елена', 'Сергеевна', 2, 'petrova@example.com; +7-999-234-5678'),
+('Сидоров', 'Алексей', 'Владимирович', 3, 'sidorov@example.com; +7-999-345-6789'),
+('Козлова', 'Мария', 'Андреевна', 4, 'kozlova@example.com; +7-999-456-7890'),
+('Смирнов', 'Дмитрий', 'Николаевич', 5, 'smirnov@example.com; +7-999-567-8901'),
+('Волкова', 'Анна', 'Павловна', 2, 'volkova@example.com; +7-999-678-9012');
 GO
 
 -- 4. Заполнение Rooms (Залы)
@@ -52,12 +55,9 @@ GO
 
 -- 6. Заполнение Users (Пользователи)
 INSERT INTO Users (EmployeeId, Login, PasswordHash, Role) VALUES 
-(1, 'ivan.ivanov', 'hash_admin_123', 'Admin'),
-(2, 'elena.petrova', 'hash_manager_456', 'Manager'),
-(3, 'alexey.sidorov', 'hash_employee_789', 'Employee'),
-(4, 'maria.kozlova', 'hash_manager_321', 'Manager'),
-(5, 'dmitry.smirnov', 'hash_employee_654', 'Employee'),
-(6, 'anna.volkova', 'hash_employee_987', 'Employee');
+(1, 'admin', '25f43b1486ad95a1398e3eeb3d83bc4010015fcc9bedb35b432e00298d5021f7', 'Admin'),
+(2, 'elena', '0ce93c9606f0685bf60e051265891d256381f639d05c0aec67c84eec49d33cc1', 'Manager'),
+(3, 'alexey', '2f38250872acde70afec463d4fffb05def835771ca29b7abe1cb62286944637b', 'Employee');
 GO
 
 -- 7. Заполнение Reservations (Бронирования)
