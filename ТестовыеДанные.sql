@@ -1,0 +1,89 @@
+use BookingSystem;
+
+USE BookingSystem;
+GO
+
+-- 1. Заполнение Positions (Должности)
+INSERT INTO Positions (Name) VALUES 
+('Администратор'),
+('Менеджер по работе с клиентами'),
+('Технический специалист'),
+('Руководитель отдела'),
+('Координатор мероприятий');
+GO
+
+-- 2. Заполнение EventTypes (Типы событий)
+INSERT INTO EventTypes (Name) VALUES 
+('Корпоратив'),
+('День рождения'),
+('Конференция'),
+('Семинар'),
+('Свадьба'),
+('Выставка');
+GO
+
+-- 3. Заполнение Employees (Сотрудники)
+INSERT INTO Users (EmployeeId, Login, PasswordHash, Role) VALUES 
+(1, 'admin', '25f43b1486ad95a1398e3eeb3d83bc4010015fcc9bedb35b432e00298d5021f7', 'Admin'),
+(2, 'elena', '0ce93c9606f0685bf60e051265891d256381f639d05c0aec67c84eec49d33cc1', 'Manager'),
+(3, 'alexey', '2f38250872acde70afec463d4fffb05def835771ca29b7abe1cb62286944637b', 'Employee');
+GO
+
+-- 4. Заполнение Rooms (Залы)
+INSERT INTO Rooms (Name, Capacity) VALUES 
+('Зал "Торжественный"', 150),
+('Зал "Бизнес-класс"', 50),
+('Зал "Презентационный"', 80),
+('Конференц-зал "Лидер"', 120),
+('Банкетный зал "Уют"', 200);
+GO
+
+-- 5. Заполнение Events (События)
+INSERT INTO Events (Title, ClientCount, EventTypeId) VALUES 
+('Годовой корпоратив компании', 120, 1),
+('Юбилей Ивана Петрова', 80, 2),
+('IT-конференция 2026', 150, 3),
+('Тренинг "Эффективные продажи"', 40, 4),
+('Свадьба Алексея и Марии', 100, 5),
+('Художественная выставка "Вдохновение"', 60, 6),
+('Новогодний корпоратив', 180, 1),
+('День рождения компании', 90, 2);
+GO
+
+-- 6. Заполнение Users (Пользователи)
+INSERT INTO Users (EmployeeId, Login, PasswordHash, Role) VALUES 
+(1, 'ivan.ivanov', 'hash_admin_123', 'Admin'),
+(2, 'elena.petrova', 'hash_manager_456', 'Manager'),
+(3, 'alexey.sidorov', 'hash_employee_789', 'Employee'),
+(4, 'maria.kozlova', 'hash_manager_321', 'Manager'),
+(5, 'dmitry.smirnov', 'hash_employee_654', 'Employee'),
+(6, 'anna.volkova', 'hash_employee_987', 'Employee');
+GO
+
+-- 7. Заполнение Reservations (Бронирования)
+INSERT INTO Reservations (RoomId, EmployeeId, EventId, ReservationDate, StartTime, EndTime) VALUES 
+(1, 1, 1, '2026-05-20', '10:00:00', '18:00:00'),  -- Зал 1, Иван Иванов, Корпоратив
+(2, 2, 3, '2026-06-05', '09:00:00', '17:00:00'),  -- Зал 2, Елена Петрова, Конференция
+(3, 3, 4, '2026-06-10', '11:00:00', '15:00:00'),  -- Зал 3, Алексей Сидоров, Семинар
+(4, 4, 2, '2026-05-25', '14:00:00', '22:00:00'),  -- Зал 4, Мария Козлова, День рождения
+(5, 5, 5, '2026-07-15', '12:00:00', '23:00:00'),  -- Зал 5, Дмитрий Смирнов, Свадьба
+(1, 6, 6, '2026-08-01', '10:00:00', '19:00:00'),  -- Зал 1, Анна Волкова, Выставка
+(2, 2, 7, '2026-12-25', '18:00:00', '23:59:00'),  -- Зал 2, Елена Петрова, Новогодний корпоратив
+(3, 3, 8, '2026-09-18', '13:00:00', '20:00:00');  -- Зал 3, Алексей Сидоров, День рождения компании
+GO
+
+-- Проверка заполнения (опционально)
+SELECT 'Positions' AS TableName, COUNT(*) AS RecordCount FROM Positions
+UNION ALL
+SELECT 'EventTypes', COUNT(*) FROM EventTypes
+UNION ALL
+SELECT 'Employees', COUNT(*) FROM Employees
+UNION ALL
+SELECT 'Rooms', COUNT(*) FROM Rooms
+UNION ALL
+SELECT 'Events', COUNT(*) FROM Events
+UNION ALL
+SELECT 'Users', COUNT(*) FROM Users
+UNION ALL
+SELECT 'Reservations', COUNT(*) FROM Reservations;
+GO

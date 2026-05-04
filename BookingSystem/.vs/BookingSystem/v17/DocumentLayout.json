@@ -1,12 +1,104 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\timei\\source\\repos\\Sab1ckk\\BookingHallSystem\\BookingSystem\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|c:\\users\\timei\\source\\repos\\sab1ckk\\bookinghallsystem\\bookingsystem\\bookingsystem\\migrations\\202605041045188_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|solutionrelative:bookingsystem\\migrations\\202605041045188_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|c:\\users\\timei\\source\\repos\\sab1ckk\\bookinghallsystem\\bookingsystem\\bookingsystem\\migrations\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|solutionrelative:bookingsystem\\migrations\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|c:\\users\\timei\\source\\repos\\sab1ckk\\bookinghallsystem\\bookingsystem\\bookingsystem\\model\\systemmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|solutionrelative:bookingsystem\\model\\systemmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|c:\\users\\timei\\source\\repos\\sab1ckk\\bookinghallsystem\\bookingsystem\\bookingsystem\\mainwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|solutionrelative:bookingsystem\\mainwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|c:\\users\\timei\\source\\repos\\sab1ckk\\bookinghallsystem\\bookingsystem\\bookingsystem\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|solutionrelative:bookingsystem\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "202605041045188_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\timei\\source\\repos\\Sab1ckk\\BookingHallSystem\\BookingSystem\\BookingSystem\\Migrations\\202605041045188_InitialCreate.cs",
+              "RelativeDocumentMoniker": "BookingSystem\\Migrations\\202605041045188_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\timei\\source\\repos\\Sab1ckk\\BookingHallSystem\\BookingSystem\\BookingSystem\\Migrations\\202605041045188_InitialCreate.cs",
+              "RelativeToolTip": "BookingSystem\\Migrations\\202605041045188_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAABbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-04T10:45:22.748Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Configuration.cs",
+              "DocumentMoniker": "C:\\Users\\timei\\source\\repos\\Sab1ckk\\BookingHallSystem\\BookingSystem\\BookingSystem\\Migrations\\Configuration.cs",
+              "RelativeDocumentMoniker": "BookingSystem\\Migrations\\Configuration.cs",
+              "ToolTip": "C:\\Users\\timei\\source\\repos\\Sab1ckk\\BookingHallSystem\\BookingSystem\\BookingSystem\\Migrations\\Configuration.cs",
+              "RelativeToolTip": "BookingSystem\\Migrations\\Configuration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-04T10:33:55.034Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SystemModel.cs",
+              "DocumentMoniker": "C:\\Users\\timei\\source\\repos\\Sab1ckk\\BookingHallSystem\\BookingSystem\\BookingSystem\\Model\\SystemModel.cs",
+              "RelativeDocumentMoniker": "BookingSystem\\Model\\SystemModel.cs",
+              "ToolTip": "C:\\Users\\timei\\source\\repos\\Sab1ckk\\BookingHallSystem\\BookingSystem\\BookingSystem\\Model\\SystemModel.cs",
+              "RelativeToolTip": "BookingSystem\\Model\\SystemModel.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAAwFEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-04T10:30:30.303Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\timei\\source\\repos\\Sab1ckk\\BookingHallSystem\\BookingSystem\\BookingSystem\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "BookingSystem\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\timei\\source\\repos\\Sab1ckk\\BookingHallSystem\\BookingSystem\\BookingSystem\\MainWindow.xaml.cs",
+              "RelativeToolTip": "BookingSystem\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-04T10:29:40.807Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\timei\\source\\repos\\Sab1ckk\\BookingHallSystem\\BookingSystem\\BookingSystem\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "BookingSystem\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\timei\\source\\repos\\Sab1ckk\\BookingHallSystem\\BookingSystem\\BookingSystem\\MainWindow.xaml",
+              "RelativeToolTip": "BookingSystem\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-04T09:48:11.678Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
