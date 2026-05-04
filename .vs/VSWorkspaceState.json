@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\BookingSystem",
+    "\\BookingSystem\\BookingSystem"
   ],
+  "SelectedNode": "\\BookingSystem\\BookingSystem.sln",
   "PreviewInSolutionExplorer": false
 }
