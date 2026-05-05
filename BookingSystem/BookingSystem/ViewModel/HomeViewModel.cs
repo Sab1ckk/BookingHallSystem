@@ -26,17 +26,14 @@ namespace BookingSystem.ViewModel
             set { _mostPopularRoom = value; OnPropertyChanged(); }
         }
 
-        public HomeViewModel(SystemModel db) // Передаем контекст БД
+        public HomeViewModel(SystemModel db)
         {
             DateTime today = DateTime.Today;
 
-            // 1. Получаем свободные залы на сегодня
-            // Свободным считаем зал, у которого нет броней на сегодня ВООБЩЕ
             FreeRooms = db.Rooms
                 .Where(r => !r.Reservations.Any(res => res.ReservationDate == today))
                 .ToList();
 
-            // 2. Ищем самый популярный зал (за все время)
             var popular = db.Rooms
                 .OrderByDescending(r => r.Reservations.Count)
                 .FirstOrDefault();

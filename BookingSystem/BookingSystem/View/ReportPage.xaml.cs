@@ -17,7 +17,7 @@ namespace BookingSystem.View
     /// <summary>
     /// Логика взаимодействия для ReportPage.xaml
     /// </summary>
-    public partial class ReportPage : Window
+    public partial class ReportPage : Page
     {
         public ReportPage()
         {

@@ -5,10 +5,163 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:BookingSystem.View"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="500" d:DesignWidth="800"
       Title="CelendarPage">
 
-    <Grid>
-        
+    <Page.Resources>
+        <!-- Стиль заголовков полей -->
+        <Style x:Key="FieldLabel" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#64748B"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Margin" Value="0,0,0,5"/>
+        </Style>
+
+        <!-- Стиль для полей ввода (TextBox/ComboBox/DatePicker) -->
+        <Style TargetType="Control" x:Key="ModernInput">
+            <Setter Property="Height" Value="38"/>
+            <Setter Property="Margin" Value="0,0,0,15"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderBrush" Value="#E2E8F0"/>
+            <Setter Property="Padding" Value="8,5"/>
+            <Style.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="6"/>
+                </Style>
+            </Style.Resources>
+        </Style>
+
+        <!-- Переопределение DataGrid -->
+        <Style TargetType="DataGrid">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="RowHeight" Value="45"/>
+            <Setter Property="GridLinesVisibility" Value="None"/>
+            <Setter Property="HeadersVisibility" Value="Column"/>
+            <Style.Resources>
+                <Style TargetType="DataGridColumnHeader">
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="Foreground" Value="#94A3B8"/>
+                    <Setter Property="FontWeight" Value="SemiBold"/>
+                    <Setter Property="Padding" Value="10"/>
+                    <Setter Property="BorderThickness" Value="0,0,0,1"/>
+                    <Setter Property="BorderBrush" Value="#F1F5F9"/>
+                </Style>
+                <Style TargetType="DataGridRow">
+                    <Setter Property="Margin" Value="0,2"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#F8FAFC"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Style.Resources>
+        </Style>
+    </Page.Resources>
+
+    <Grid Background="#F5F7FA">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="350"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- ЛЕВАЯ ПАНЕЛЬ: ФОРМА -->
+        <Border Grid.Column="0" Background="White" Margin="20" CornerRadius="15">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="15" ShadowDepth="1" Opacity="0.05"/>
+            </Border.Effect>
+
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <StackPanel Margin="25">
+                    <TextBlock Text="Новое бронирование" FontSize="20" FontWeight="Bold" Foreground="#1E293B" Margin="0,0,0,25"/>
+
+                    <TextBlock Text="ОТВЕТСТВЕННЫЙ" Style="{StaticResource FieldLabel}"/>
+                    <TextBox Text="{Binding ResponsibleEmployee.FullName, Mode=OneWay}" 
+                             IsReadOnly="True" 
+                             Style="{StaticResource ModernInput}"
+                             Background="#F8FAFC" 
+                             Foreground="#64748B"
+                             BorderBrush="Transparent"/>
+
+                    <TextBlock Text="ВЫБЕРИТЕ ЗАЛ" Style="{StaticResource FieldLabel}"/>
+                    <ComboBox ItemsSource="{Binding AllRooms}" 
+                              SelectedItem="{Binding SelectedRoom}" 
+                              DisplayMemberPath="Name" 
+                              Style="{StaticResource ModernInput}"/>
+
+                    <TextBlock Text="МЕРОПРИЯТИЕ" Style="{StaticResource FieldLabel}"/>
+                    <ComboBox ItemsSource="{Binding AllEvents}" 
+                              SelectedItem="{Binding SelectedEvent}" 
+                              DisplayMemberPath="Title" 
+                              Style="{StaticResource ModernInput}"/>
+
+                    <TextBlock Text="ДАТА" Style="{StaticResource FieldLabel}"/>
+                    <DatePicker SelectedDate="{Binding SelectedDate}" Margin="0,0,0,15"/>
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Grid.Column="0" Margin="0,0,8,0">
+                            <TextBlock Text="НАЧАЛО" Style="{StaticResource FieldLabel}"/>
+                            <TextBox Text="{Binding StartTimeStr}" Style="{StaticResource ModernInput}"/>
+                        </StackPanel>
+                        <StackPanel Grid.Column="1" Margin="8,0,0,0">
+                            <TextBlock Text="КОНЕЦ" Style="{StaticResource FieldLabel}"/>
+                            <TextBox Text="{Binding EndTimeStr}" Style="{StaticResource ModernInput}"/>
+                        </StackPanel>
+                    </Grid>
+
+                    <Button Content="Забронировать" 
+                            Command="{Binding AddReservationCommand}" 
+                            Height="45" 
+                            Background="#1E293B" 
+                            Foreground="White" 
+                            FontWeight="Bold" 
+                            Margin="0,15,0,0">
+                        <Button.Resources>
+                            <Style TargetType="Border">
+                                <Setter Property="CornerRadius" Value="8"/>
+                            </Style>
+                        </Button.Resources>
+                    </Button>
+                </StackPanel>
+            </ScrollViewer>
+        </Border>
+
+        <!-- ПРАВАЯ ПАНЕЛЬ: ТАБЛИЦА -->
+        <Grid Grid.Column="1" Margin="10,20,20,20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" Text="Журнал бронирований" FontSize="24" FontWeight="Bold" Foreground="#1E293B" Margin="10,0,0,20"/>
+
+            <Border Grid.Row="1" Background="White" CornerRadius="15" Padding="15">
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="15" ShadowDepth="1" Opacity="0.05"/>
+                </Border.Effect>
+
+                <DataGrid ItemsSource="{Binding AllReservations}" 
+                          AutoGenerateColumns="False" 
+                          IsReadOnly="True">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ДАТА" Binding="{Binding ReservationDate, StringFormat=\{0:dd.MM.yyyy\}}" Width="100"/>
+                        <DataGridTemplateColumn Header="ЗАЛ" Width="150">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Rooms.Name}" FontWeight="SemiBold" VerticalAlignment="Center" Foreground="#1E40AF"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <DataGridTextColumn Header="СОБЫТИЕ" Binding="{Binding Events.Title}" Width="*"/>
+                        <DataGridTextColumn Header="ВРЕМЯ" Binding="{Binding StartTime}" Width="80"/>
+                        <DataGridTextColumn Header="ОТВЕТСТВЕННЫЙ" Binding="{Binding Employees.FullName}" Width="180"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </Border>
+        </Grid>
     </Grid>
 </Page>

@@ -82,6 +82,7 @@
     <Compile Include="Model\SystemModel.cs" />
     <Compile Include="Model\Users.cs" />
     <Compile Include="ViewModel\HomeViewModel.cs" />
+    <Compile Include="ViewModel\ReservationViewModel.cs" />
     <Compile Include="View\EventsPage.xaml.cs">
       <DependentUpon>EventsPage.xaml</DependentUpon>
     </Compile>

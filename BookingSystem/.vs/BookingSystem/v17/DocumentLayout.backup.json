@@ -3,48 +3,72 @@
   "WorkspaceRootPath": "C:\\Users\\timei\\source\\repos\\Sab1ckk\\BookingHallSystem\\BookingSystem\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|c:\\users\\timei\\source\\repos\\sab1ckk\\bookinghallsystem\\bookingsystem\\bookingsystem\\viewmodel\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|solutionrelative:bookingsystem\\viewmodel\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|c:\\users\\timei\\source\\repos\\sab1ckk\\bookinghallsystem\\bookingsystem\\bookingsystem\\view\\reservationpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|solutionrelative:bookingsystem\\view\\reservationpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|C:\\Users\\timei\\source\\repos\\Sab1ckk\\BookingHallSystem\\BookingSystem\\bookingsystem\\migrations\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|solutionrelative:bookingsystem\\migrations\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|c:\\users\\timei\\source\\repos\\sab1ckk\\bookinghallsystem\\bookingsystem\\bookingsystem\\view\\homepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|solutionrelative:bookingsystem\\view\\homepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|c:\\users\\timei\\source\\repos\\sab1ckk\\bookinghallsystem\\bookingsystem\\bookingsystem\\model\\reservations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|solutionrelative:bookingsystem\\model\\reservations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|c:\\users\\timei\\source\\repos\\sab1ckk\\bookinghallsystem\\bookingsystem\\bookingsystem\\view\\homepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|solutionrelative:bookingsystem\\view\\homepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|C:\\Users\\timei\\source\\repos\\Sab1ckk\\BookingHallSystem\\BookingSystem\\bookingsystem\\view\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|solutionrelative:bookingsystem\\view\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|c:\\users\\timei\\source\\repos\\sab1ckk\\bookinghallsystem\\bookingsystem\\bookingsystem\\view\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|solutionrelative:bookingsystem\\view\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|c:\\users\\timei\\source\\repos\\sab1ckk\\bookinghallsystem\\bookingsystem\\bookingsystem\\view\\reportpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|solutionrelative:bookingsystem\\view\\reportpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|C:\\Users\\timei\\source\\repos\\Sab1ckk\\BookingHallSystem\\BookingSystem\\bookingsystem\\viewmodel\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|solutionrelative:bookingsystem\\viewmodel\\mainviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|C:\\Users\\timei\\source\\repos\\Sab1ckk\\BookingHallSystem\\BookingSystem\\bookingsystem\\view\\reservationpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|solutionrelative:bookingsystem\\view\\reservationpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|c:\\users\\timei\\source\\repos\\sab1ckk\\bookinghallsystem\\bookingsystem\\bookingsystem\\viewmodel\\reservationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|solutionrelative:bookingsystem\\viewmodel\\reservationviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|c:\\users\\timei\\source\\repos\\sab1ckk\\bookinghallsystem\\bookingsystem\\bookingsystem\\migrations\\202605050400070_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|solutionrelative:bookingsystem\\migrations\\202605050400070_initialcreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|C:\\Users\\timei\\source\\repos\\Sab1ckk\\BookingHallSystem\\BookingSystem\\bookingsystem\\viewmodel\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|solutionrelative:bookingsystem\\viewmodel\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|c:\\users\\timei\\source\\repos\\sab1ckk\\bookinghallsystem\\bookingsystem\\bookingsystem\\view\\reportpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|solutionrelative:bookingsystem\\view\\reportpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|C:\\Users\\timei\\source\\repos\\Sab1ckk\\BookingHallSystem\\BookingSystem\\bookingsystem\\view\\homepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|solutionrelative:bookingsystem\\view\\homepage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|C:\\Users\\timei\\source\\repos\\Sab1ckk\\BookingHallSystem\\BookingSystem\\bookingsystem\\view\\homepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|solutionrelative:bookingsystem\\view\\homepage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|C:\\Users\\timei\\source\\repos\\Sab1ckk\\BookingHallSystem\\BookingSystem\\bookingsystem\\view\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|solutionrelative:bookingsystem\\view\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|c:\\users\\timei\\source\\repos\\sab1ckk\\bookinghallsystem\\bookingsystem\\bookingsystem\\view\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|solutionrelative:bookingsystem\\view\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|C:\\Users\\timei\\source\\repos\\Sab1ckk\\BookingHallSystem\\BookingSystem\\bookingsystem\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|solutionrelative:bookingsystem\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|C:\\Users\\timei\\source\\repos\\Sab1ckk\\BookingHallSystem\\BookingSystem\\bookingsystem\\view\\loginwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
-      "RelativeMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|solutionrelative:bookingsystem\\view\\loginwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
+      "AbsoluteMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|C:\\Users\\timei\\source\\repos\\Sab1ckk\\BookingHallSystem\\BookingSystem\\bookingsystem\\migrations\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|solutionrelative:bookingsystem\\migrations\\configuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|C:\\Users\\timei\\source\\repos\\Sab1ckk\\BookingHallSystem\\BookingSystem\\bookingsystem\\view\\reservationpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|solutionrelative:bookingsystem\\view\\reservationpage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|C:\\Users\\timei\\source\\repos\\Sab1ckk\\BookingHallSystem\\BookingSystem\\bookingsystem\\model\\reservations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|solutionrelative:bookingsystem\\model\\reservations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|C:\\Users\\timei\\source\\repos\\Sab1ckk\\BookingHallSystem\\BookingSystem\\bookingsystem\\view\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|solutionrelative:bookingsystem\\view\\loginwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|C:\\Users\\timei\\source\\repos\\Sab1ckk\\BookingHallSystem\\BookingSystem\\bookingsystem\\view\\loginwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{20683448-A385-43E6-B9D7-8BA794114C6B}|BookingSystem\\BookingSystem.csproj|solutionrelative:bookingsystem\\view\\loginwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -59,32 +83,108 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "ReservationPage.xaml",
+              "DocumentMoniker": "C:\\Users\\timei\\source\\repos\\Sab1ckk\\BookingHallSystem\\BookingSystem\\BookingSystem\\View\\ReservationPage.xaml",
+              "RelativeDocumentMoniker": "BookingSystem\\View\\ReservationPage.xaml",
+              "ToolTip": "C:\\Users\\timei\\source\\repos\\Sab1ckk\\BookingHallSystem\\BookingSystem\\BookingSystem\\View\\ReservationPage.xaml",
+              "RelativeToolTip": "BookingSystem\\View\\ReservationPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-05T04:59:04.089Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ReservationViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\timei\\source\\repos\\Sab1ckk\\BookingHallSystem\\BookingSystem\\BookingSystem\\ViewModel\\ReservationViewModel.cs",
+              "RelativeDocumentMoniker": "BookingSystem\\ViewModel\\ReservationViewModel.cs",
+              "ToolTip": "C:\\Users\\timei\\source\\repos\\Sab1ckk\\BookingHallSystem\\BookingSystem\\BookingSystem\\ViewModel\\ReservationViewModel.cs",
+              "RelativeToolTip": "BookingSystem\\ViewModel\\ReservationViewModel.cs",
+              "ViewState": "AgIAAB0AAAAAAAAAAAAiwC0AAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T04:51:03.007Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ReportPage.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\timei\\source\\repos\\Sab1ckk\\BookingHallSystem\\BookingSystem\\BookingSystem\\View\\ReportPage.xaml.cs",
+              "RelativeDocumentMoniker": "BookingSystem\\View\\ReportPage.xaml.cs",
+              "ToolTip": "C:\\Users\\timei\\source\\repos\\Sab1ckk\\BookingHallSystem\\BookingSystem\\BookingSystem\\View\\ReportPage.xaml.cs",
+              "RelativeToolTip": "BookingSystem\\View\\ReportPage.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T04:27:34.467Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ReportPage.xaml",
+              "DocumentMoniker": "C:\\Users\\timei\\source\\repos\\Sab1ckk\\BookingHallSystem\\BookingSystem\\BookingSystem\\View\\ReportPage.xaml",
+              "RelativeDocumentMoniker": "BookingSystem\\View\\ReportPage.xaml",
+              "ToolTip": "C:\\Users\\timei\\source\\repos\\Sab1ckk\\BookingHallSystem\\BookingSystem\\BookingSystem\\View\\ReportPage.xaml",
+              "RelativeToolTip": "BookingSystem\\View\\ReportPage.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-05-05T04:27:31.807Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\timei\\source\\repos\\Sab1ckk\\BookingHallSystem\\BookingSystem\\BookingSystem\\View\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "BookingSystem\\View\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\timei\\source\\repos\\Sab1ckk\\BookingHallSystem\\BookingSystem\\BookingSystem\\View\\MainWindow.xaml.cs",
+              "RelativeToolTip": "BookingSystem\\View\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T04:16:02.908Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "202605050400070_InitialCreate.cs",
+              "DocumentMoniker": "C:\\Users\\timei\\source\\repos\\Sab1ckk\\BookingHallSystem\\BookingSystem\\BookingSystem\\Migrations\\202605050400070_InitialCreate.cs",
+              "RelativeDocumentMoniker": "BookingSystem\\Migrations\\202605050400070_InitialCreate.cs",
+              "ToolTip": "C:\\Users\\timei\\source\\repos\\Sab1ckk\\BookingHallSystem\\BookingSystem\\BookingSystem\\Migrations\\202605050400070_InitialCreate.cs",
+              "RelativeToolTip": "BookingSystem\\Migrations\\202605050400070_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-05-05T04:00:10.911Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "HomeViewModel.cs",
               "DocumentMoniker": "C:\\Users\\timei\\source\\repos\\Sab1ckk\\BookingHallSystem\\BookingSystem\\BookingSystem\\ViewModel\\HomeViewModel.cs",
               "RelativeDocumentMoniker": "BookingSystem\\ViewModel\\HomeViewModel.cs",
               "ToolTip": "C:\\Users\\timei\\source\\repos\\Sab1ckk\\BookingHallSystem\\BookingSystem\\BookingSystem\\ViewModel\\HomeViewModel.cs",
               "RelativeToolTip": "BookingSystem\\ViewModel\\HomeViewModel.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAA1wCkAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAwwCQAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-05T03:34:34.787Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "HomePage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\timei\\source\\repos\\Sab1ckk\\BookingHallSystem\\BookingSystem\\BookingSystem\\View\\HomePage.xaml.cs",
               "RelativeDocumentMoniker": "BookingSystem\\View\\HomePage.xaml.cs",
               "ToolTip": "C:\\Users\\timei\\source\\repos\\Sab1ckk\\BookingHallSystem\\BookingSystem\\BookingSystem\\View\\HomePage.xaml.cs",
               "RelativeToolTip": "BookingSystem\\View\\HomePage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-05-05T03:34:09.969Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 14,
               "Title": "Reservations.cs",
               "DocumentMoniker": "C:\\Users\\timei\\source\\repos\\Sab1ckk\\BookingHallSystem\\BookingSystem\\BookingSystem\\Model\\Reservations.cs",
               "RelativeDocumentMoniker": "BookingSystem\\Model\\Reservations.cs",
@@ -92,12 +192,11 @@
               "RelativeToolTip": "BookingSystem\\Model\\Reservations.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAB4AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-05T03:28:31.145Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-05T03:28:31.145Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\timei\\source\\repos\\Sab1ckk\\BookingHallSystem\\BookingSystem\\BookingSystem\\View\\MainWindow.xaml",
               "RelativeDocumentMoniker": "BookingSystem\\View\\MainWindow.xaml",
@@ -109,31 +208,33 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 12,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "C:\\Users\\timei\\source\\repos\\Sab1ckk\\BookingHallSystem\\BookingSystem\\BookingSystem\\App.xaml.cs",
               "RelativeDocumentMoniker": "BookingSystem\\App.xaml.cs",
               "ToolTip": "C:\\Users\\timei\\source\\repos\\Sab1ckk\\BookingHallSystem\\BookingSystem\\BookingSystem\\App.xaml.cs",
               "RelativeToolTip": "BookingSystem\\App.xaml.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAmwBkAAABKAAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAAAqwC0AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-04T14:03:25.329Z"
+              "WhenOpened": "2026-05-04T14:03:25.329Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 2,
               "Title": "MainViewModel.cs",
               "DocumentMoniker": "C:\\Users\\timei\\source\\repos\\Sab1ckk\\BookingHallSystem\\BookingSystem\\BookingSystem\\ViewModel\\MainViewModel.cs",
               "RelativeDocumentMoniker": "BookingSystem\\ViewModel\\MainViewModel.cs",
               "ToolTip": "C:\\Users\\timei\\source\\repos\\Sab1ckk\\BookingHallSystem\\BookingSystem\\BookingSystem\\ViewModel\\MainViewModel.cs",
               "RelativeToolTip": "BookingSystem\\ViewModel\\MainViewModel.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAmwDAAAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAABwAAAAAAAAAAAA0wCIAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-04T12:04:09.207Z"
+              "WhenOpened": "2026-05-04T12:04:09.207Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 16,
               "Title": "LoginWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\timei\\source\\repos\\Sab1ckk\\BookingHallSystem\\BookingSystem\\BookingSystem\\View\\LoginWindow.xaml.cs",
               "RelativeDocumentMoniker": "BookingSystem\\View\\LoginWindow.xaml.cs",
@@ -145,7 +246,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 15,
               "Title": "LoginWindow.xaml",
               "DocumentMoniker": "C:\\Users\\timei\\source\\repos\\Sab1ckk\\BookingHallSystem\\BookingSystem\\BookingSystem\\View\\LoginWindow.xaml",
               "RelativeDocumentMoniker": "BookingSystem\\View\\LoginWindow.xaml",
@@ -157,31 +258,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 3,
               "Title": "ReservationPage.xaml.cs",
               "DocumentMoniker": "C:\\Users\\timei\\source\\repos\\Sab1ckk\\BookingHallSystem\\BookingSystem\\BookingSystem\\View\\ReservationPage.xaml.cs",
               "RelativeDocumentMoniker": "BookingSystem\\View\\ReservationPage.xaml.cs",
               "ToolTip": "C:\\Users\\timei\\source\\repos\\Sab1ckk\\BookingHallSystem\\BookingSystem\\BookingSystem\\View\\ReservationPage.xaml.cs",
               "RelativeToolTip": "BookingSystem\\View\\ReservationPage.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-04T12:35:38.337Z"
+              "WhenOpened": "2026-05-04T12:35:38.337Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "HomePage.xaml",
               "DocumentMoniker": "C:\\Users\\timei\\source\\repos\\Sab1ckk\\BookingHallSystem\\BookingSystem\\BookingSystem\\View\\HomePage.xaml",
               "RelativeDocumentMoniker": "BookingSystem\\View\\HomePage.xaml",
-              "ToolTip": "C:\\Users\\timei\\source\\repos\\Sab1ckk\\BookingHallSystem\\BookingSystem\\BookingSystem\\View\\HomePage.xaml*",
-              "RelativeToolTip": "BookingSystem\\View\\HomePage.xaml*",
+              "ToolTip": "C:\\Users\\timei\\source\\repos\\Sab1ckk\\BookingHallSystem\\BookingSystem\\BookingSystem\\View\\HomePage.xaml",
+              "RelativeToolTip": "BookingSystem\\View\\HomePage.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2026-05-04T12:07:21.197Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 13,
               "Title": "Configuration.cs",
               "DocumentMoniker": "C:\\Users\\timei\\source\\repos\\Sab1ckk\\BookingHallSystem\\BookingSystem\\BookingSystem\\Migrations\\Configuration.cs",
               "RelativeDocumentMoniker": "BookingSystem\\Migrations\\Configuration.cs",
@@ -189,8 +291,7 @@
               "RelativeToolTip": "BookingSystem\\Migrations\\Configuration.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-05-04T10:33:55.034Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-05-04T10:33:55.034Z"
             }
           ]
         }

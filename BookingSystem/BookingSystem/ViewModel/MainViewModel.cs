@@ -36,12 +36,16 @@ namespace BookingSystem.ViewModel
                 _currentUser = user;
                 // Инициализируем команды с помощью RelayCommand
                 OpenHomeCommand = new RelayCommand(obj => CurrentPage = new HomePage());
-                OpenReservationCommand = new RelayCommand(obj => CurrentPage = new CelendarPage(),
+
+                OpenReservationCommand = new RelayCommand(obj => CurrentPage = new CelendarPage(_currentUser.Employees),
                     obj => _currentUser.Role == "Admin" || _currentUser.Role == "Manager" || _currentUser.Role == "Employee");
+
                 OpenUsersCommand = new RelayCommand(obj => CurrentPage = new UserPage(),
                     obj => _currentUser.Role == "Admin");
+
                 OpenEventsCommand = new RelayCommand(obj => CurrentPage = new EventsPage(),
                     obj => _currentUser.Role == "Admin" || _currentUser.Role == "Manager");
+
                 OpenReportCommand = new RelayCommand(obj => CurrentPage = new ReportPage(),
                     obj => _currentUser.Role == "Admin" || _currentUser.Role == "Manager");
 

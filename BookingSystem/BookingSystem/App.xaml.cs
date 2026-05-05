@@ -7,6 +7,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 using BookingSystem.View;
+using System.ComponentModel;
 
 namespace BookingSystem
 {
@@ -26,6 +27,7 @@ namespace BookingSystem
                 // Передаем данные пользователя во ViewModel главного окна
                 var viewModel = new MainViewModel(loginWindow.AuthorizedUser);
                 mainView.DataContext = viewModel;
+                mainView.Closed += (s, args) => Shutdown();
                 mainView.Show();
             }
             else
@@ -42,5 +44,6 @@ namespace BookingSystem
 
             Logout();
         }
+
     }
 }

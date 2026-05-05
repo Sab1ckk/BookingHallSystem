@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BookingSystem.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,10 @@ namespace BookingSystem.View
     /// </summary>
     public partial class CelendarPage : Page
     {
-        public CelendarPage()
+        public CelendarPage(Employees currentEmployee)
         {
             InitializeComponent();
+            this.DataContext = new ReservationViewModel(currentEmployee);
         }
     }
 }

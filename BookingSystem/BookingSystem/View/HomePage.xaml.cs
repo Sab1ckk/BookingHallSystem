@@ -1,5 +1,7 @@
-﻿using System;
+﻿using BookingSystem.ViewModel;
+using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,6 +25,7 @@ namespace BookingSystem.View
         public HomePage()
         {
             InitializeComponent();
+            this.DataContext = new HomeViewModel(new SystemModel());
         }
     }
 }
