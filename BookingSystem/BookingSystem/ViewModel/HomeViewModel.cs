@@ -13,6 +13,7 @@ namespace BookingSystem.ViewModel
     {
         private List<Rooms> _freeRooms;
         private string _mostPopularRoom;
+        private string _roomCount;
 
         public List<Rooms> FreeRooms
         {
@@ -24,6 +25,12 @@ namespace BookingSystem.ViewModel
         {
             get => _mostPopularRoom;
             set { _mostPopularRoom = value; OnPropertyChanged(); }
+        }
+
+        public string RoomCount
+        {
+            get => _roomCount;
+            set { _roomCount = value; OnPropertyChanged(); }
         }
 
         public HomeViewModel(SystemModel db)
@@ -38,7 +45,11 @@ namespace BookingSystem.ViewModel
                 .OrderByDescending(r => r.Reservations.Count)
                 .FirstOrDefault();
 
+            int counter = db.Rooms.Count();
+
             MostPopularRoom = popular?.Name ?? "Нет данных";
+
+            RoomCount = $"Залов в системе: {counter}" ?? "Нет данных";
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

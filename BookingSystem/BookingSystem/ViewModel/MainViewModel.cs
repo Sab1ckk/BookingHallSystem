@@ -29,15 +29,19 @@ namespace BookingSystem.ViewModel
         public ICommand OpenEventsCommand { get; }
         public ICommand OpenReportCommand { get; }
         public ICommand LogoutCommand { get; }
+
+        public ICommand OpenEventTypesCommand { get; }
+        public ICommand OpenRoomsCommand { get; }
+        public ICommand OpenEmployyesCommand { get; }
+        public ICommand OpenPositionsCommand { get; }
         public MainViewModel(Users user)
         {
             try
             {
-                _currentUser = user;
                 // Инициализируем команды с помощью RelayCommand
                 OpenHomeCommand = new RelayCommand(obj => CurrentPage = new HomePage());
 
-                OpenReservationCommand = new RelayCommand(obj => CurrentPage = new CelendarPage(_currentUser.Employees),
+                OpenReservationCommand = new RelayCommand(obj => CurrentPage = new CelendarPage(user.Employees),
                     obj => _currentUser.Role == "Admin" || _currentUser.Role == "Manager" || _currentUser.Role == "Employee");
 
                 OpenUsersCommand = new RelayCommand(obj => CurrentPage = new UserPage(),
@@ -48,6 +52,19 @@ namespace BookingSystem.ViewModel
 
                 OpenReportCommand = new RelayCommand(obj => CurrentPage = new ReportPage(),
                     obj => _currentUser.Role == "Admin" || _currentUser.Role == "Manager");
+
+                OpenEventTypesCommand = new RelayCommand(obj => CurrentPage = new EventTypePage(),
+                    obj => _currentUser.Role == "Admin");
+
+                OpenRoomsCommand = new RelayCommand(obj => CurrentPage = new RoomPage(),
+                    obj => _currentUser.Role == "Admin");
+
+                OpenEmployyesCommand = new RelayCommand(obj => CurrentPage = new EmployeePage(),
+                    obj => _currentUser.Role == "Admin");
+
+                OpenPositionsCommand = new RelayCommand(obj => CurrentPage = new PositionPage(),
+                    obj => _currentUser.Role == "Admin");
+
 
                 LogoutCommand = new RelayCommand(obj => { 
                     if (Application.Current is App app)

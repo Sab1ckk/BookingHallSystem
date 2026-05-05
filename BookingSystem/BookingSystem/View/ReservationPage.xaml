@@ -57,6 +57,26 @@
                 </Style>
             </Style.Resources>
         </Style>
+
+        <Style x:Key="DelButton" TargetType="Button">
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="btnBorder" Background="{TemplateBinding Background}" CornerRadius="8">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Opacity" Value="0.9"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Page.Resources>
 
     <Grid Background="#F5F7FA">
@@ -143,24 +163,40 @@
                 <Border.Effect>
                     <DropShadowEffect BlurRadius="15" ShadowDepth="1" Opacity="0.05"/>
                 </Border.Effect>
-
-                <DataGrid ItemsSource="{Binding AllReservations}" 
-                          AutoGenerateColumns="False" 
-                          IsReadOnly="True">
-                    <DataGrid.Columns>
-                        <DataGridTextColumn Header="ДАТА" Binding="{Binding ReservationDate, StringFormat=\{0:dd.MM.yyyy\}}" Width="100"/>
-                        <DataGridTemplateColumn Header="ЗАЛ" Width="150">
-                            <DataGridTemplateColumn.CellTemplate>
-                                <DataTemplate>
-                                    <TextBlock Text="{Binding Rooms.Name}" FontWeight="SemiBold" VerticalAlignment="Center" Foreground="#1E40AF"/>
-                                </DataTemplate>
-                            </DataGridTemplateColumn.CellTemplate>
-                        </DataGridTemplateColumn>
-                        <DataGridTextColumn Header="СОБЫТИЕ" Binding="{Binding Events.Title}" Width="*"/>
-                        <DataGridTextColumn Header="ВРЕМЯ" Binding="{Binding StartTime}" Width="80"/>
-                        <DataGridTextColumn Header="ОТВЕТСТВЕННЫЙ" Binding="{Binding Employees.FullName}" Width="180"/>
-                    </DataGrid.Columns>
-                </DataGrid>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <DataGrid Grid.Row="0"
+                              ItemsSource="{Binding AllReservations}" 
+                              SelectedItem="{Binding SelectedReservation}"
+                              AutoGenerateColumns="False" 
+                              IsReadOnly="True">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="ДАТА" Binding="{Binding ReservationDate, StringFormat=\{0:dd.MM.yyyy\}}" Width="100"/>
+                            <DataGridTemplateColumn Header="ЗАЛ" Width="150">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding Rooms.Name}" FontWeight="SemiBold" VerticalAlignment="Center" Foreground="#1E40AF"/>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            <DataGridTextColumn Header="СОБЫТИЕ" Binding="{Binding Events.Title}" Width="*"/>
+                            <DataGridTextColumn Header="ВРЕМЯ" Binding="{Binding StartTime}" Width="80"/>
+                            <DataGridTextColumn Header="ОТВЕТСТВЕННЫЙ" Binding="{Binding Employees.FullName}" Width="180"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="10">
+                        <TextBlock Text="Выберите строку для удаления" VerticalAlignment="Center" Foreground="#94A3B8" Margin="0,0,15,0" FontStyle="Italic"/>
+                        <Button Content="Удалить выбранное" 
+                                Command="{Binding DeleteReservationCommand}" 
+                                Style="{StaticResource DelButton}"
+                                Background="#FFF1F2" 
+                                Foreground="#E11D48" 
+                                Width="180"/>
+                    </StackPanel>
+                </Grid>
             </Border>
         </Grid>
     </Grid>

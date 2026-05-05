@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using BookingSystem.ViewModel;
 
 namespace BookingSystem.View
 {
@@ -22,6 +23,7 @@ namespace BookingSystem.View
         public ReportPage()
         {
             InitializeComponent();
+            this.DataContext = new ReportViewModel();
         }
     }
 }

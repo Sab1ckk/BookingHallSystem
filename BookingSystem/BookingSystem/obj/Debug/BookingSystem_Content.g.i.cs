@@ -8,7 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("systemmodels.context.tt")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("systemmodels.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("resourse/image/50a393463bf07a597c881c021eda0613.png")]
 
 

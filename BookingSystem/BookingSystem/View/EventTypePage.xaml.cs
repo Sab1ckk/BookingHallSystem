@@ -12,20 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using BookingSystem.View;
-using BookingSystem.ViewModel;
 
 namespace BookingSystem.View
 {
     /// <summary>
-    /// Логика взаимодействия для EventsPage.xaml
+    /// Логика взаимодействия для EventTypePage.xaml
     /// </summary>
-    public partial class EventsPage : Page
+    public partial class EventTypePage : Page
     {
-        public EventsPage()
+        public EventTypePage()
         {
             InitializeComponent();
-            this.DataContext = new EventViewModel();
         }
     }
 }

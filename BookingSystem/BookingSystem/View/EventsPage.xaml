@@ -5,10 +5,178 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:BookingSystem.View"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="EventsPage">
+      d:DesignHeight="720" d:DesignWidth="1100"
+      Title="Управление мероприятиями">
 
-    <Grid>
-        
+    <Page.Resources>
+        <!-- Общий стиль для заголовков полей -->
+        <Style x:Key="InputLabel" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#64748B"/>
+            <Setter Property="FontSize" Value="11"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Margin" Value="0,0,0,5"/>
+        </Style>
+
+        <!-- Стиль для текстовых полей и комбобоксов -->
+        <Style x:Key="ModernField" TargetType="Control">
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Background" Value="#F8FAFC"/>
+            <Setter Property="BorderBrush" Value="#E2E8F0"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="10,0"/>
+            <Style.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="8"/>
+                </Style>
+            </Style.Resources>
+        </Style>
+
+        <!-- Стиль для кнопок -->
+        <Style x:Key="ActionButton" TargetType="Button">
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="btnBorder" Background="{TemplateBinding Background}" CornerRadius="8">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Opacity" Value="0.9"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+
+    <Grid Margin="25">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- Заголовок -->
+            <RowDefinition Height="Auto"/>
+            <!-- Форма добавления -->
+            <RowDefinition Height="*"/>
+            <!-- Таблица -->
+        </Grid.RowDefinitions>
+
+        <!-- 1. Заголовок -->
+        <StackPanel Grid.Row="0" Margin="0,0,0,20">
+            <TextBlock Text="Мероприятия" FontSize="28" FontWeight="Bold" Foreground="#1E293B"/>
+            <TextBlock Text="Управление типами событий и списком активных мероприятий" Foreground="#64748B" FontSize="14"/>
+        </StackPanel>
+
+        <!-- 2. Форма добавления (Карточка) -->
+        <Border Grid.Row="1" Background="White" CornerRadius="15" Padding="20" Margin="0,0,0,25">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="15" ShadowDepth="1" Opacity="0.05"/>
+            </Border.Effect>
+            <StackPanel>
+                <TextBlock Text="Быстрое добавление" FontSize="16" FontWeight="SemiBold" Foreground="#1E293B" Margin="0,0,0,15"/>
+                <UniformGrid Columns="4">
+                    <StackPanel Margin="0,0,15,0">
+                        <TextBlock Text="НАЗВАНИЕ" Style="{StaticResource InputLabel}"/>
+                        <TextBox Text="{Binding NewTitle, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource ModernField}"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="0,0,15,0">
+                        <TextBlock Text="КОЛ-ВО ГОСТЕЙ" Style="{StaticResource InputLabel}"/>
+                        <TextBox Text="{Binding NewClientCount, UpdateSourceTrigger=PropertyChanged}" Style="{StaticResource ModernField}"/>
+                    </StackPanel>
+
+                    <StackPanel Margin="0,0,15,0">
+                        <TextBlock Text="ТИП СОБЫТИЯ" Style="{StaticResource InputLabel}"/>
+                        <ComboBox ItemsSource="{Binding AllEventTypes}" 
+                                  DisplayMemberPath="Name" 
+                                  SelectedItem="{Binding SelectedEventType}"
+                                  Style="{StaticResource ModernField}"/>
+                    </StackPanel>
+
+                    <Button Content="＋ Добавить" 
+                            Command="{Binding AddEventCommand}" 
+                            Style="{StaticResource ActionButton}" 
+                            Background="#1E293B" 
+                            Foreground="White" 
+                            VerticalAlignment="Bottom"/>
+                </UniformGrid>
+            </StackPanel>
+        </Border>
+
+        <!-- 3. Таблица (Карточка) -->
+        <Border Grid.Row="2" Background="White" CornerRadius="15" Padding="10">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="15" ShadowDepth="1" Opacity="0.05"/>
+            </Border.Effect>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <DataGrid ItemsSource="{Binding AllEvents}" 
+                          SelectedItem="{Binding SelectedEvent}" 
+                          AutoGenerateColumns="False" 
+                          IsReadOnly="True"
+                          Background="Transparent"
+                          BorderThickness="0"
+                          RowHeight="50"
+                          GridLinesVisibility="None"
+                          HeadersVisibility="Column">
+                    <DataGrid.Resources>
+                        <Style TargetType="DataGridColumnHeader">
+                            <Setter Property="Background" Value="Transparent"/>
+                            <Setter Property="Foreground" Value="#94A3B8"/>
+                            <Setter Property="Padding" Value="15,10"/>
+                            <Setter Property="FontWeight" Value="SemiBold"/>
+                            <Setter Property="BorderThickness" Value="0,0,0,1"/>
+                            <Setter Property="BorderBrush" Value="#F1F5F9"/>
+                        </Style>
+                        <Style TargetType="DataGridRow">
+                            <Setter Property="BorderThickness" Value="0,0,0,1"/>
+                            <Setter Property="BorderBrush" Value="#F8FAFC"/>
+                            <Style.Triggers>
+                                <Trigger Property="IsSelected" Value="True">
+                                    <Setter Property="Background" Value="#F1F5F9"/>
+                                    <Setter Property="Foreground" Value="#1E293B"/>
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </DataGrid.Resources>
+
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="60"/>
+                        <DataGridTemplateColumn Header="МЕРОПРИЯТИЕ" Width="*">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding Title}" VerticalAlignment="Center" FontWeight="SemiBold" Foreground="#1E293B"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <DataGridTemplateColumn Header="ТИП" Width="180">
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding EventTypes.Name}" VerticalAlignment="Center" FontSize="12" Foreground="#475569"/>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                        <DataGridTextColumn Header="ГОСТЕЙ" Binding="{Binding ClientCount}" Width="100"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+
+                <!-- Футер таблицы с кнопкой удаления -->
+                <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="10">
+                    <TextBlock Text="Выберите строку для удаления" VerticalAlignment="Center" Foreground="#94A3B8" Margin="0,0,15,0" FontStyle="Italic"/>
+                    <Button Content="Удалить выбранное" 
+                            Command="{Binding DeleteEventCommand}" 
+                            Style="{StaticResource ActionButton}"
+                            Background="#FFF1F2" 
+                            Foreground="#E11D48" 
+                            Width="180"/>
+                </StackPanel>
+            </Grid>
+        </Border>
     </Grid>
 </Page>

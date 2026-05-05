@@ -10,14 +10,12 @@
         Background="#F5F7FA">
 
     <Window.Resources>
-        <!-- Цветовая палитра -->
         <SolidColorBrush x:Key="SidebarBackground" Color="#1E293B"/>
         <SolidColorBrush x:Key="AccentColor" Color="#FFFD7F67"/>
         <SolidColorBrush x:Key="TextLight" Color="#F8FAFC"/>
         <SolidColorBrush x:Key="TextDark" Color="#334155"/>
         <SolidColorBrush x:Key="HoverColor" Color="#334155"/>
 
-        <!-- Стиль кнопок сайдбара -->
         <Style x:Key="SideBarButton" TargetType="Button">
             <Setter Property="Background" Value="Transparent"/>
             <Setter Property="Foreground" Value="{StaticResource TextLight}"/>
@@ -58,7 +56,6 @@
             </Setter>
         </Style>
 
-        <!-- Стиль для верхней панели (Menu/Header) -->
         <Style x:Key="HeaderMenuItem" TargetType="MenuItem">
             <Setter Property="Foreground" Value="{StaticResource TextDark}"/>
             <Setter Property="FontFamily" Value="Segoe UI Semibold"/>
@@ -69,58 +66,53 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <!-- Ширина сайдбара -->
             <ColumnDefinition Width="260"/>
-            <!-- Основная область -->
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <!-- САЙДБАР -->
         <Border Grid.Column="0" Background="{StaticResource SidebarBackground}">
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="100"/>
-                    <!-- Логотип -->
                     <RowDefinition Height="*"/>
-                    <!-- Навигация -->
                     <RowDefinition Height="Auto"/>
-                    <!-- Футер -->
                 </Grid.RowDefinitions>
 
-                <!-- Логотип/Название -->
-                <StackPanel Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center">
-                    <TextBlock Text="RESTAURANT" Foreground="White" FontSize="22" FontWeight="Bold" />
-                    <TextBlock Text="Management System" Foreground="{StaticResource AccentColor}" FontSize="12" HorizontalAlignment="Center"/>
+                <StackPanel Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" Orientation="Horizontal">
+                    <Image Source="/Resourse/Image/logotip.png" Width="50" Margin="0,0,10,0"/>
+                    <StackPanel>
+                        <TextBlock Text="RESTAURANT" Foreground="White" FontSize="22" FontWeight="Bold" />
+                        <TextBlock Text="Management System" Foreground="{StaticResource AccentColor}" FontSize="12" HorizontalAlignment="Center"/>
+                    </StackPanel>
                 </StackPanel>
+                
 
-                <!-- Кнопки навигации -->
                 <StackPanel Grid.Row="1" Margin="0,20,0,0">
                     <Button Content="🏠  Главная" Command="{Binding OpenHomeCommand}" Style="{StaticResource SideBarButton}"/>
                     <Button Content="📅  Бронирования" Command="{Binding OpenReservationCommand}" Style="{StaticResource SideBarButton}"/>
-                    <Button Content="👥  Пользователи" Command="{Binding OpenUsersCommand}" Style="{StaticResource SideBarButton}"/>
                     <Button Content="🎭  Мероприятия" Command="{Binding OpenEventsCommand}" Style="{StaticResource SideBarButton}"/>
                     <Button Content="📊  Отчеты" Command="{Binding OpenReportCommand}" Style="{StaticResource SideBarButton}"/>
 
-                    <Separator Background="#334155" Margin="20,15" Opacity="0.5"/>
+                    <Separator Background="#334155" Margin="20,10" Opacity="0.5"/>
 
-                    <Button Content="⚙️  База данных" Command="{Binding OpenHomeCommand}" Style="{StaticResource SideBarButton}"/>
+                    <Button Content="⚙️  База данных " Command="{Binding OpenHomeCommand}" Style="{StaticResource SideBarButton}" IsEnabled="False" Margin="10,-5"/>
+                    <Button Content="▦  Типы мероприятий" Command="{Binding OpenUsersCommand}" Style="{StaticResource SideBarButton}" Margin="10,-5"/>
+                    <Button Content="▦  Залы" Command="{Binding OpenUsersCommand}" Style="{StaticResource SideBarButton}" Margin="10,-5"/>
+                    <Button Content="▦  Пользователи" Command="{Binding OpenUsersCommand}" Style="{StaticResource SideBarButton}" Margin="10,-5"/>
+                    <Button Content="▦  Сотрудники" Command="{Binding OpenUsersCommand}" Style="{StaticResource SideBarButton}" Margin="10,-5"/>
+                    <Button Content="▦  Должности" Command="{Binding OpenUsersCommand}" Style="{StaticResource SideBarButton}" Margin="10,-5"/>
                 </StackPanel>
 
-                <!-- Версия или копирайт внизу -->
-                <TextBlock Grid.Row="2" Text="v 1.0.2" Foreground="#475569" Margin="20" HorizontalAlignment="Center"/>
+                <TextBlock Grid.Row="2" Text="v alpha" Foreground="#475569" Margin="20" HorizontalAlignment="Center"/>
             </Grid>
         </Border>
 
-        <!-- ОСНОВНОЙ КОНТЕНТ -->
         <Grid Grid.Column="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="60"/>
-                <!-- Верхняя панель -->
                 <RowDefinition Height="*"/>
-                <!-- Frame для контента -->
             </Grid.RowDefinitions>
 
-            <!-- Верхняя панель (Header) -->
             <Border Grid.Row="0" Background="White">
                 <Border.Effect>
                     <DropShadowEffect BlurRadius="15" Direction="270" ShadowDepth="1" Opacity="0.1"/>
@@ -129,13 +121,11 @@
                     <TextBlock Text="Панель управления" VerticalAlignment="Center" FontSize="18" Foreground="{StaticResource TextDark}" FontWeight="Medium"/>
 
                     <Menu Background="Transparent" HorizontalAlignment="Right" VerticalAlignment="Center">
-                        <MenuItem Header="Профиль" Style="{StaticResource HeaderMenuItem}"/>
                         <MenuItem Header="Выйти" Command="{Binding LogoutCommand}" Style="{StaticResource HeaderMenuItem}" Foreground="#E11D48"/>
                     </Menu>
                 </Grid>
             </Border>
 
-            <!-- Рабочая область -->
             <Frame Grid.Row="1" 
                    Content="{Binding CurrentPage}" 
                    NavigationUIVisibility="Hidden" 

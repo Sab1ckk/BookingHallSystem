@@ -8,6 +8,8 @@ namespace BookingSystem
 
     public partial class Reservations
     {
+        [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 
         public int RoomId { get; set; }
