@@ -25,7 +25,6 @@ C:\Users\timei\source\repos\Sab1ckk\BookingHallSystem\BookingSystem\BookingSyste
 C:\Users\timei\source\repos\Sab1ckk\BookingHallSystem\BookingSystem\BookingSystem\obj\Debug\View\ReservationPage.baml
 C:\Users\timei\source\repos\Sab1ckk\BookingHallSystem\BookingSystem\BookingSystem\obj\Debug\View\HomePage.baml
 C:\Users\timei\source\repos\Sab1ckk\BookingHallSystem\BookingSystem\BookingSystem\obj\Debug\View\MainWindow.baml
-C:\Users\timei\source\repos\Sab1ckk\BookingHallSystem\BookingSystem\BookingSystem\obj\Debug\BookingSystem.Migrations.InitialCreate.resources
 C:\Users\timei\source\repos\Sab1ckk\BookingHallSystem\BookingSystem\BookingSystem\obj\Debug\View\UserPage.g.cs
 C:\Users\timei\source\repos\Sab1ckk\BookingHallSystem\BookingSystem\BookingSystem\obj\Debug\View\UserPage.baml
 C:\Users\timei\source\repos\Sab1ckk\BookingHallSystem\BookingSystem\BookingSystem\obj\Debug\View\EventsPage.g.cs

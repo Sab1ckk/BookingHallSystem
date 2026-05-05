@@ -68,9 +68,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Helper\RelayCommand.cs" />
-    <Compile Include="Migrations\202605041045188_InitialCreate.cs" />
-    <Compile Include="Migrations\202605041045188_InitialCreate.Designer.cs">
-      <DependentUpon>202605041045188_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\202605050400070_InitialCreate.cs" />
+    <Compile Include="Migrations\202605050400070_InitialCreate.Designer.cs">
+      <DependentUpon>202605050400070_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Employees.cs" />
@@ -81,6 +81,7 @@
     <Compile Include="Model\Rooms.cs" />
     <Compile Include="Model\SystemModel.cs" />
     <Compile Include="Model\Users.cs" />
+    <Compile Include="ViewModel\HomeViewModel.cs" />
     <Compile Include="View\EventsPage.xaml.cs">
       <DependentUpon>EventsPage.xaml</DependentUpon>
     </Compile>
@@ -151,8 +152,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Migrations\202605041045188_InitialCreate.resx">
-      <DependentUpon>202605041045188_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202605050400070_InitialCreate.resx">
+      <DependentUpon>202605050400070_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

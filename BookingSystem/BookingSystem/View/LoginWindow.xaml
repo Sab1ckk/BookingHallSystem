@@ -7,8 +7,7 @@
         Title="Авторизация" Height="500" Width="450"
         WindowStartupLocation="CenterScreen"
         Background="#F5F7FA"
-        WindowStyle="None" 
-        AllowsTransparency="True">
+        WindowStyle="ThreeDBorderWindow">
 
     <Window.Resources>
         <!-- Стилизация текстовых полей -->
