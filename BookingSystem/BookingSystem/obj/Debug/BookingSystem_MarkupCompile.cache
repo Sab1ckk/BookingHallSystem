@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\timei\source\repos\Sab1ckk\BookingHallSystem\BookingSystem\BookingSystem\App.xaml
-71214992135
+11-1640262167
 
-28247480175
+361268101909
 18-966382185
-View\EventsPage.xaml;View\LoginWindow.xaml;View\ReportPage.xaml;View\ReservationPage.xaml;View\HomePage.xaml;View\MainWindow.xaml;View\UserPage.xaml;
+View\EmployeePage.xaml;View\EventsPage.xaml;View\EventTypePage.xaml;View\LoginWindow.xaml;View\PositionPage.xaml;View\ReportPage.xaml;View\ReservationPage.xaml;View\HomePage.xaml;View\MainWindow.xaml;View\RoomPage.xaml;View\UserPage.xaml;
 
 False
 

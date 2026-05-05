@@ -15,20 +15,31 @@ namespace BookingSystem
     /// Логика взаимодействия для App.xaml
     /// </summary>
     public partial class App : Application
-    {   
+    {
+        public MainWindow _mainView;
         public void Logout()
         {
             LoginWindow loginWindow = new LoginWindow();
-
+            Window oldWindow = Application.Current.MainWindow; 
+            
             // Если пользователь успешно вошел (DialogResult == true)
             if (loginWindow.ShowDialog() == true)
-            {
-                var mainView = new MainWindow();
+            {   
+                _mainView = new MainWindow();
                 // Передаем данные пользователя во ViewModel главного окна
                 var viewModel = new MainViewModel(loginWindow.AuthorizedUser);
-                mainView.DataContext = viewModel;
-                mainView.Closed += (s, args) => Shutdown();
-                mainView.Show();
+                _mainView.DataContext = viewModel;
+                
+                Application.Current.MainWindow = _mainView;
+                _mainView.Show();
+
+                if (oldWindow != null)
+                {
+                    oldWindow.Closed -= OnMainWindowClosed;
+                    oldWindow?.Close();
+                }
+
+                _mainView.Closed += OnMainWindowClosed;
             }
             else
             {
@@ -43,6 +54,11 @@ namespace BookingSystem
             this.ShutdownMode = ShutdownMode.OnExplicitShutdown;
 
             Logout();
+        }
+
+        private void OnMainWindowClosed(object sender, EventArgs e)
+        {
+            Application.Current.Shutdown();
         }
 
     }

@@ -95,12 +95,12 @@
 
                     <Separator Background="#334155" Margin="20,10" Opacity="0.5"/>
 
-                    <Button Content="⚙️  База данных " Command="{Binding OpenHomeCommand}" Style="{StaticResource SideBarButton}" IsEnabled="False" Margin="10,-5"/>
-                    <Button Content="▦  Типы мероприятий" Command="{Binding OpenUsersCommand}" Style="{StaticResource SideBarButton}" Margin="10,-5"/>
-                    <Button Content="▦  Залы" Command="{Binding OpenUsersCommand}" Style="{StaticResource SideBarButton}" Margin="10,-5"/>
-                    <Button Content="▦  Пользователи" Command="{Binding OpenUsersCommand}" Style="{StaticResource SideBarButton}" Margin="10,-5"/>
-                    <Button Content="▦  Сотрудники" Command="{Binding OpenUsersCommand}" Style="{StaticResource SideBarButton}" Margin="10,-5"/>
-                    <Button Content="▦  Должности" Command="{Binding OpenUsersCommand}" Style="{StaticResource SideBarButton}" Margin="10,-5"/>
+                    <Button Content="⚙️  База данных " Command="{Binding OpenHomeCommand}" Style="{StaticResource SideBarButton}" IsEnabled="False" Margin="10,0"/>
+                    <Button Content="▦  Типы мероприятий" Command="{Binding OpenUsersCommand}" Style="{StaticResource SideBarButton}" Margin="10,0"/>
+                    <Button Content="▦  Залы" Command="{Binding OpenUsersCommand}" Style="{StaticResource SideBarButton}" Margin="10,0"/>
+                    <Button Content="▦  Пользователи" Command="{Binding OpenUsersCommand}" Style="{StaticResource SideBarButton}" Margin="10,0"/>
+                    <Button Content="▦  Сотрудники" Command="{Binding OpenUsersCommand}" Style="{StaticResource SideBarButton}" Margin="10,0"/>
+                    <Button Content="▦  Должности" Command="{Binding OpenUsersCommand}" Style="{StaticResource SideBarButton}" Margin="10,0"/>
                 </StackPanel>
 
                 <TextBlock Grid.Row="2" Text="v alpha" Foreground="#475569" Margin="20" HorizontalAlignment="Center"/>
