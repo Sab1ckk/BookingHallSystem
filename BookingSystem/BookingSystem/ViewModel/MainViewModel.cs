@@ -28,7 +28,7 @@ namespace BookingSystem.ViewModel
         public ICommand OpenUsersCommand { get; }
         public ICommand OpenEventsCommand { get; }
         public ICommand OpenReportCommand { get; }
-        
+        public ICommand LogoutCommand { get; }
         public MainViewModel(Users user)
         {
             try
@@ -41,9 +41,14 @@ namespace BookingSystem.ViewModel
                 OpenUsersCommand = new RelayCommand(obj => CurrentPage = new UserPage(),
                     obj => _currentUser.Role == "Admin");
                 OpenEventsCommand = new RelayCommand(obj => CurrentPage = new EventsPage(),
-                    obj => _currentUser.Role == "Admin");
+                    obj => _currentUser.Role == "Admin" || _currentUser.Role == "Manager");
                 OpenReportCommand = new RelayCommand(obj => CurrentPage = new ReportPage(),
-                    obj => _currentUser.Role == "Admin");
+                    obj => _currentUser.Role == "Admin" || _currentUser.Role == "Manager");
+
+                LogoutCommand = new RelayCommand(obj => { 
+                    if (Application.Current is App app)
+                    { app.Logout(); } 
+                });
 
 
                 CurrentPage = new HomePage();

@@ -3,21 +3,95 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:BookingSystem.View"
         mc:Ignorable="d"
-        Title="LoginWindow" Height="400" Width="400">
+        Title="Авторизация" Height="500" Width="450"
+        WindowStartupLocation="CenterScreen"
+        Background="#F5F7FA"
+        WindowStyle="None" 
+        AllowsTransparency="True">
+
     <Window.Resources>
-        <Style x:Key="1">
+        <!-- Стилизация текстовых полей -->
+        <Style x:Key="ModernInput" TargetType="Control">
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="10,0"/>
+            <Setter Property="Margin" Value="0,5,0,15"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Control">
+                        <Border Background="White" 
+                                CornerRadius="8" 
+                                BorderBrush="#E2E8F0" 
+                                BorderThickness="1">
+                            <ScrollViewer x:Name="PART_ContentHost" Margin="{TemplateBinding Padding}"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <!-- Стиль кнопки "Войти" -->
+        <Style x:Key="LoginButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#1E293B"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Height" Value="45"/>
+            <Setter Property="Margin" Value="0,10,0,0"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="border" Background="{TemplateBinding Background}" CornerRadius="8">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="border" Property="Background" Value="#FFFD7F67"/>
+                                <Setter Property="Cursor" Value="Hand"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
         </Style>
     </Window.Resources>
-    <Grid>
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Width="210">
-            <TextBlock Text="Логин" Margin="5"/>
-            <TextBox x:Name="LoginBox"/>
-            <TextBlock Text="Пароль" Margin="5"/>
-            <PasswordBox x:Name="PasswordBox"/>
 
-            <Button Content="Войти" Margin="10" Click="LoginButton_Click"/>
+    <!-- Основная карточка входа -->
+    <Border Margin="40" Background="White" CornerRadius="20">
+        <Border.Effect>
+            <DropShadowEffect BlurRadius="30" Direction="0" ShadowDepth="0" Opacity="0.1"/>
+        </Border.Effect>
+
+        <StackPanel Margin="30" VerticalAlignment="Center">
+            <!-- Заголовок -->
+            <TextBlock Text="Вход в систему" 
+                       FontSize="24" 
+                       FontWeight="Bold" 
+                       Foreground="#1E293B" 
+                       HorizontalAlignment="Center" 
+                       Margin="0,0,0,5"/>
+
+            <TextBlock Text="Управление бронированием" 
+                       FontSize="12" 
+                       Foreground="#64748B" 
+                       HorizontalAlignment="Center" 
+                       Margin="0,0,0,30"/>
+
+            <!-- Поля ввода -->
+            <TextBlock Text="Логин" Foreground="#64748B" FontWeight="Medium" FontSize="13"/>
+            <TextBox x:Name="LoginBox" Style="{StaticResource ModernInput}"/>
+
+            <TextBlock Text="Пароль" Foreground="#64748B" FontWeight="Medium" FontSize="13"/>
+            <PasswordBox x:Name="PasswordBox" Style="{StaticResource ModernInput}"/>
+
+            <!-- Кнопка -->
+            <Button Content="Войти" 
+                    Style="{StaticResource LoginButtonStyle}" 
+                    Click="LoginButton_Click"/>
+
+            
         </StackPanel>
-    </Grid>
+    </Border>
 </Window>

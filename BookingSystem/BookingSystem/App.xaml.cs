@@ -14,13 +14,9 @@ namespace BookingSystem
     /// Логика взаимодействия для App.xaml
     /// </summary>
     public partial class App : Application
-    {
-        protected override void OnStartup(StartupEventArgs e)
-        {   
-            base.OnStartup(e);
-
-            this.ShutdownMode = ShutdownMode.OnExplicitShutdown;
-
+    {   
+        public void Logout()
+        {
             LoginWindow loginWindow = new LoginWindow();
 
             // Если пользователь успешно вошел (DialogResult == true)
@@ -37,6 +33,14 @@ namespace BookingSystem
                 // Если закрыли окно логина — выходим из приложения
                 Shutdown();
             }
+        }
+        protected override void OnStartup(StartupEventArgs e)
+        {   
+            base.OnStartup(e);
+
+            this.ShutdownMode = ShutdownMode.OnExplicitShutdown;
+
+            Logout();
         }
     }
 }

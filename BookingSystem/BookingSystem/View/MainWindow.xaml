@@ -5,92 +5,141 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BookingSystem"
         mc:Ignorable="d"
-        Title="MainWindow" Height="720" Width="1280">
+        Title="Restaurant Admin Panel" Height="800" Width="1400"
+        WindowStartupLocation="CenterScreen"
+        Background="#F5F7FA">
+
     <Window.Resources>
+        <!-- Цветовая палитра -->
+        <SolidColorBrush x:Key="SidebarBackground" Color="#1E293B"/>
+        <SolidColorBrush x:Key="AccentColor" Color="#FFFD7F67"/>
+        <SolidColorBrush x:Key="TextLight" Color="#F8FAFC"/>
+        <SolidColorBrush x:Key="TextDark" Color="#334155"/>
+        <SolidColorBrush x:Key="HoverColor" Color="#334155"/>
+
+        <!-- Стиль кнопок сайдбара -->
         <Style x:Key="SideBarButton" TargetType="Button">
-            <Setter Property="Background" Value="Transparent"/> 
-            <Setter Property="Foreground" Value="White"/>
-            <Setter Property="FontFamily" Value="Bahnschrift"/>
-            <Setter Property="FontSize" Value="20"/>
-            <Setter Property="HorizontalAlignment" Value="Left"/>
-            <Setter Property="Margin" Value="10,0,20,10"/>
-            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Foreground" Value="{StaticResource TextLight}"/>
+            <Setter Property="FontFamily" Value="Segoe UI Semibold"/>
+            <Setter Property="FontSize" Value="15"/>
+            <Setter Property="Height" Value="45"/>
+            <Setter Property="Margin" Value="10,5,10,5"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="Padding" Value="15,0,0,0"/>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="Button">
                         <Border x:Name="border" 
-                                Background="Transparent"
-                                BorderBrush="Transparent"
-                                BorderThickness="0"
-                                CornerRadius="5">
-                            <ContentPresenter HorizontalAlignment="Center" 
-                            VerticalAlignment="Center"/>
+                                Background="{TemplateBinding Background}"
+                                CornerRadius="8">
+                            <ContentPresenter HorizontalAlignment="Left" 
+                                              VerticalAlignment="Center"
+                                              Margin="{TemplateBinding Padding}"/>
                         </Border>
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsMouseOver" Value="True">
-                                <Setter TargetName="border" 
-                                    Property="Background" 
-                                    Value="Transparent"/>
+                                <Setter TargetName="border" Property="Background" Value="{StaticResource HoverColor}"/>
+                                <Setter Property="Foreground" Value="{StaticResource AccentColor}"/>
                                 <Setter Property="Cursor" Value="Hand"/>
                             </Trigger>
                             <Trigger Property="IsPressed" Value="True">
-                                <Setter TargetName="border" 
-                                    Property="Background" 
-                                    Value="#FF004080"/>
-                            </Trigger>
-                            <Trigger Property="IsEnabled" Value="False">
-                                <Setter TargetName="border" 
-                                    Property="Background" 
-                                    Value="Transparent"/>
+                                <Setter TargetName="border" Property="Background" Value="#0F172A"/>
+                                <Setter Property="RenderTransform">
+                                    <Setter.Value>
+                                        <ScaleTransform ScaleX="0.98" ScaleY="0.98"/>
+                                    </Setter.Value>
+                                </Setter>
                             </Trigger>
                         </ControlTemplate.Triggers>
                     </ControlTemplate>
                 </Setter.Value>
             </Setter>
-            <Style.Triggers>
-                <Trigger Property="IsEnabled" Value="False">
-                    <Setter Property="Opacity" Value="0.5"/>
-                </Trigger>
-
-                <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Foreground" Value="#FFFD7F67"/>
-                </Trigger>
-            </Style.Triggers>
         </Style>
-        <Style x:Key="UsHover" TargetType="TextBlock">
-            <Setter Property="Foreground" Value="White"/>
-            <Style.Triggers>
-                <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Foreground" Value="#FFFD7F67"/>
-                </Trigger>
-            </Style.Triggers>
+
+        <!-- Стиль для верхней панели (Menu/Header) -->
+        <Style x:Key="HeaderMenuItem" TargetType="MenuItem">
+            <Setter Property="Foreground" Value="{StaticResource TextDark}"/>
+            <Setter Property="FontFamily" Value="Segoe UI Semibold"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Padding" Value="15,10"/>
         </Style>
     </Window.Resources>
+
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="auto"/>
+            <!-- Ширина сайдбара -->
+            <ColumnDefinition Width="260"/>
+            <!-- Основная область -->
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <Expander Grid.Column="0" Grid.Row="0" Grid.RowSpan="2" ExpandDirection="Right" Background="#FF1F1A5B">
-            <StackPanel>
-                <Button Content="Главная" Margin="0,30,10,0" Command="{Binding OpenHomeCommand}" Style="{StaticResource SideBarButton}"/>
-                <Button Content="Бронирования" Margin="0,10,10,0" Command="{Binding OpenReservationCommand}" Style="{StaticResource SideBarButton}"/>
-                <Button Content="Пользователи" Margin="0,10,10,0" Command="{Binding OpenUsersCommand}" Style="{StaticResource SideBarButton}"/>
-                <Button Content="Мероприятия" Margin="0,10,10,0" Command="{Binding OpenEventsCommand}" Style="{StaticResource SideBarButton}"/>
-                <Button Content="Отчеты" Margin="0,10,10,0" Command="{Binding OpenReportCommand}" Style="{StaticResource SideBarButton}"/>
-                <Separator Height="30" Background="Transparent"/>
-                <Button Content="База данных" Margin="0,10,10,0" Command="{Binding OpenHomeCommand}" Style="{StaticResource SideBarButton}"/>
-            </StackPanel>
-        </Expander>
 
-        <Menu Grid.Row="0" Grid.Column="1" HorizontalAlignment="Right">
-            <MenuItem Header="Выйти" Margin="5" FontFamily="Bahnschrift" FontSize="20"/>
-        </Menu>
+        <!-- САЙДБАР -->
+        <Border Grid.Column="0" Background="{StaticResource SidebarBackground}">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"/>
+                    <!-- Логотип -->
+                    <RowDefinition Height="*"/>
+                    <!-- Навигация -->
+                    <RowDefinition Height="Auto"/>
+                    <!-- Футер -->
+                </Grid.RowDefinitions>
 
-        <Frame Content="{Binding CurrentPage}" NavigationUIVisibility="Hidden"/>
+                <!-- Логотип/Название -->
+                <StackPanel Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center">
+                    <TextBlock Text="RESTAURANT" Foreground="White" FontSize="22" FontWeight="Bold" />
+                    <TextBlock Text="Management System" Foreground="{StaticResource AccentColor}" FontSize="12" HorizontalAlignment="Center"/>
+                </StackPanel>
+
+                <!-- Кнопки навигации -->
+                <StackPanel Grid.Row="1" Margin="0,20,0,0">
+                    <Button Content="🏠  Главная" Command="{Binding OpenHomeCommand}" Style="{StaticResource SideBarButton}"/>
+                    <Button Content="📅  Бронирования" Command="{Binding OpenReservationCommand}" Style="{StaticResource SideBarButton}"/>
+                    <Button Content="👥  Пользователи" Command="{Binding OpenUsersCommand}" Style="{StaticResource SideBarButton}"/>
+                    <Button Content="🎭  Мероприятия" Command="{Binding OpenEventsCommand}" Style="{StaticResource SideBarButton}"/>
+                    <Button Content="📊  Отчеты" Command="{Binding OpenReportCommand}" Style="{StaticResource SideBarButton}"/>
+
+                    <Separator Background="#334155" Margin="20,15" Opacity="0.5"/>
+
+                    <Button Content="⚙️  База данных" Command="{Binding OpenHomeCommand}" Style="{StaticResource SideBarButton}"/>
+                </StackPanel>
+
+                <!-- Версия или копирайт внизу -->
+                <TextBlock Grid.Row="2" Text="v 1.0.2" Foreground="#475569" Margin="20" HorizontalAlignment="Center"/>
+            </Grid>
+        </Border>
+
+        <!-- ОСНОВНОЙ КОНТЕНТ -->
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+                <!-- Верхняя панель -->
+                <RowDefinition Height="*"/>
+                <!-- Frame для контента -->
+            </Grid.RowDefinitions>
+
+            <!-- Верхняя панель (Header) -->
+            <Border Grid.Row="0" Background="White">
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="15" Direction="270" ShadowDepth="1" Opacity="0.1"/>
+                </Border.Effect>
+                <Grid Margin="20,0">
+                    <TextBlock Text="Панель управления" VerticalAlignment="Center" FontSize="18" Foreground="{StaticResource TextDark}" FontWeight="Medium"/>
+
+                    <Menu Background="Transparent" HorizontalAlignment="Right" VerticalAlignment="Center">
+                        <MenuItem Header="Профиль" Style="{StaticResource HeaderMenuItem}"/>
+                        <MenuItem Header="Выйти" Command="{Binding LogoutCommand}" Style="{StaticResource HeaderMenuItem}" Foreground="#E11D48"/>
+                    </Menu>
+                </Grid>
+            </Border>
+
+            <!-- Рабочая область -->
+            <Frame Grid.Row="1" 
+                   Content="{Binding CurrentPage}" 
+                   NavigationUIVisibility="Hidden" 
+                   Margin="25"/>
+        </Grid>
     </Grid>
 </Window>

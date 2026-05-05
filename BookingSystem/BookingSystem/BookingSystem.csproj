@@ -67,7 +67,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Help\RelayCommand.cs" />
+    <Compile Include="Helper\RelayCommand.cs" />
     <Compile Include="Migrations\202605041045188_InitialCreate.cs" />
     <Compile Include="Migrations\202605041045188_InitialCreate.Designer.cs">
       <DependentUpon>202605041045188_InitialCreate.cs</DependentUpon>
@@ -167,9 +167,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
