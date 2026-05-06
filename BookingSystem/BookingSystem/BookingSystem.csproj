@@ -84,6 +84,7 @@
     <Compile Include="ViewModel\PositionViewModel.cs" />
     <Compile Include="ViewModel\ReportViewModel.cs" />
     <Compile Include="ViewModel\ReservationViewModel.cs" />
+    <Compile Include="ViewModel\UserView.cs" />
     <Compile Include="View\EmployeePage.xaml.cs">
       <DependentUpon>EmployeePage.xaml</DependentUpon>
     </Compile>

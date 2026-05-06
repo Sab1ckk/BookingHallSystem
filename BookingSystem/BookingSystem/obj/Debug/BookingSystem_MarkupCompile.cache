@@ -4,16 +4,21 @@
 winexe
 C#
 .cs
-C:\Users\timei\source\repos\Sab1ckk\BookingHallSystem\BookingSystem\BookingSystem\obj\Debug\
+C:\Users\maksi\Desktop\BookingHallSystem\BookingSystem\BookingSystem\obj\Debug\
 BookingSystem
 none
 false
 DEBUG;TRACE
-C:\Users\timei\source\repos\Sab1ckk\BookingHallSystem\BookingSystem\BookingSystem\App.xaml
+C:\Users\maksi\Desktop\BookingHallSystem\BookingSystem\BookingSystem\App.xaml
 11-1640262167
 
+<<<<<<< Updated upstream
 341159722400
 18-966382185
+=======
+371783401623
+181938586931
+>>>>>>> Stashed changes
 View\EmployeePage.xaml;View\EventsPage.xaml;View\EventTypePage.xaml;View\LoginWindow.xaml;View\PositionPage.xaml;View\ReportPage.xaml;View\ReservationPage.xaml;View\HomePage.xaml;View\MainWindow.xaml;View\RoomPage.xaml;View\UserPage.xaml;
 
 False
