@@ -68,6 +68,10 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Helper\RelayCommand.cs" />
+    <Compile Include="Migrations\202605050400070_InitialCreate.cs" />
+    <Compile Include="Migrations\202605050400070_InitialCreate.Designer.cs">
+      <DependentUpon>202605050400070_InitialCreate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Employees.cs" />
     <Compile Include="Model\Events.cs" />
@@ -183,6 +187,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="Migrations\202605050400070_InitialCreate.resx">
+      <DependentUpon>202605050400070_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
