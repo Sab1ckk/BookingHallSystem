@@ -94,10 +94,9 @@ namespace BookingSystem.ViewModel
 
                 if (sqlEx != null)
                 {
-                    // Выводим текст ошибки прямо из SQL (например, "Ошибка пересечения времени!")
                     MessageBox.Show(sqlEx.Message);
                 }
-                if (inner != null && inner.Number == 2627) // Код ошибки Unique Constraint
+                if (inner != null && inner.Number == 2627) 
                 {
                     MessageBox.Show("Вы уже создали бронирование на эту дату. " +
                                     "Ограничение 'одна бронь в день' нарушено.");

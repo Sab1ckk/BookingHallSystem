@@ -16,7 +16,6 @@ namespace BookingSystem.ViewModel
     {
         private SystemModel _db = new SystemModel();
 
-        // Списки данных
         public List<EventTypes> AllEventTypes { get; set; }
 
         private ObservableCollection<Events> _allEvents;
@@ -26,7 +25,6 @@ namespace BookingSystem.ViewModel
             set { _allEvents = value; OnPropertyChanged(); }
         }
 
-        // Поля для создания нового мероприятия
         private string _newTitle;
         public string NewTitle
         {
@@ -48,7 +46,6 @@ namespace BookingSystem.ViewModel
             set { _selectedEventType = value; OnPropertyChanged(); }
         }
 
-        // Выбранное мероприятие в списке (для удаления)
         public Events SelectedEvent { get; set; }
 
         public ICommand AddEventCommand { get; }
@@ -56,7 +53,6 @@ namespace BookingSystem.ViewModel
 
         public EventViewModel()
         {
-            // Загрузка справочника типов и списка мероприятий[cite: 2, 3]
             AllEventTypes = _db.EventTypes.ToList();
             LoadEvents();
 
