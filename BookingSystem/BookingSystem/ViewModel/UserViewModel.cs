@@ -14,15 +14,15 @@ namespace BookingSystem.ViewModel
 {
     public class UserViewModel : INotifyPropertyChanged
     {
-        private readonly SystemModel _context;
+        private readonly SystemModel _db;
         private string _login;
         private string _selectedRole;
         private Employees _selectedEmployee;
         private Users _selectedUser;
 
-        private ObservableCollection<Users> _users;
-        private ObservableCollection<Employees> _employees;
-        private ObservableCollection<string> _roles;
+        private List<Users> _users;
+        private List<Employees> _employees;
+        private List<string> _roles;
 
         public string Login
         {
@@ -58,19 +58,19 @@ namespace BookingSystem.ViewModel
             }
         }
 
-        public ObservableCollection<Users> Users
+        public List<Users> Users
         {
             get => _users;
             set { _users = value; OnPropertyChanged(); }
         }
 
-        public ObservableCollection<Employees> Employees
+        public List<Employees> Employees
         {
             get => _employees;
             set { _employees = value; OnPropertyChanged(); }
         }
 
-        public ObservableCollection<string> Roles
+        public List<string> Roles
         {
             get => _roles;
             set { _roles = value; OnPropertyChanged(); }
@@ -83,30 +83,37 @@ namespace BookingSystem.ViewModel
 
         public UserViewModel()
         {
-            _context = new SystemModel();
+            _db = new SystemModel();
             LoadData();
 
-            Roles = new ObservableCollection<string> { "Admin", "Manager", "User" };
+            Roles = new List<string> { "Admin", "Manager", "User" };
 
-            AddCommand = new RelayCommand(_ => AddUser());
-            UpdateCommand = new RelayCommand(_ => UpdateUser(), _ => SelectedUser != null);
-            DeleteCommand = new RelayCommand(_ => DeleteUser(), _ => SelectedUser != null);
-            ClearCommand = new RelayCommand(_ => ClearForm());
+            AddCommand = new RelayCommand(obj => AddUser());
+            UpdateCommand = new RelayCommand(obj => UpdateUser(), obj => SelectedUser != null);
+            DeleteCommand = new RelayCommand(obj => DeleteUser(), obj => SelectedUser != null);
+            ClearCommand = new RelayCommand(obj => ClearForm());
         }
 
         private void LoadData()
         {
-            Users = new ObservableCollection<Users>(
-                _context.Users.Include("Employees").ToList());
-            Employees = new ObservableCollection<Employees>(_context.Employees.ToList());
+            Users = _db.Users.Include("Employees").ToList();
+            Employees = _db.Employees.ToList();
         }
 
         private string HashPassword(string password)
         {
-            using (SHA256 sha256 = SHA256.Create())
+            using (SHA256 sha = SHA256.Create())
             {
-                byte[] hashedBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
-                return Convert.ToBase64String(hashedBytes);
+                byte[] bytes = sha.ComputeHash(Encoding.UTF8.GetBytes(password));
+
+                StringBuilder builder = new StringBuilder();
+
+                for (int i = 0; i < bytes.Length; i++)
+                {
+                    builder.Append(bytes[i].ToString("x2"));
+                }
+
+                return builder.ToString();
             }
         }
 
@@ -127,8 +134,8 @@ namespace BookingSystem.ViewModel
                 EmployeeId = SelectedEmployee?.Id
             };
 
-            _context.Users.Add(user);
-            _context.SaveChanges();
+            _db.Users.Add(user);
+            _db.SaveChanges();
             LoadData();
             ClearForm();
         }
@@ -141,7 +148,7 @@ namespace BookingSystem.ViewModel
             SelectedUser.Role = SelectedRole;
             SelectedUser.EmployeeId = SelectedEmployee?.Id;
 
-            _context.SaveChanges();
+            _db.SaveChanges();
             LoadData();
             ClearForm();
         }
@@ -155,8 +162,8 @@ namespace BookingSystem.ViewModel
 
             if (result == System.Windows.MessageBoxResult.Yes)
             {
-                _context.Users.Remove(SelectedUser);
-                _context.SaveChanges();
+                _db.Users.Remove(SelectedUser);
+                _db.SaveChanges();
                 LoadData();
                 ClearForm();
             }
