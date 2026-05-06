@@ -17,7 +17,7 @@
                         Patronymic = c.String(maxLength: 100),
                         PositionId = c.Int(nullable: false),
                         ContactInfo = c.String(maxLength: 256),
-                        FullName = c.String(nullable: false, maxLength: 302),
+                        FullName = c.String(nullable: true, maxLength: 302),
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.Positions", t => t.PositionId)
