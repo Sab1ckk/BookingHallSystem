@@ -68,9 +68,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Helper\RelayCommand.cs" />
-    <Compile Include="Migrations\202605050400070_InitialCreate.cs" />
-    <Compile Include="Migrations\202605050400070_InitialCreate.Designer.cs">
-      <DependentUpon>202605050400070_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\202605060127049_InitialFullCreate.cs" />
+    <Compile Include="Migrations\202605060127049_InitialFullCreate.Designer.cs">
+      <DependentUpon>202605060127049_InitialFullCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Model\Employees.cs" />
@@ -88,6 +88,7 @@
     <Compile Include="ViewModel\PositionViewModel.cs" />
     <Compile Include="ViewModel\ReportViewModel.cs" />
     <Compile Include="ViewModel\ReservationViewModel.cs" />
+    <Compile Include="ViewModel\UserViewModel.cs" />
     <Compile Include="View\EmployeePage.xaml.cs">
       <DependentUpon>EmployeePage.xaml</DependentUpon>
     </Compile>
@@ -187,8 +188,8 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <EmbeddedResource Include="Migrations\202605050400070_InitialCreate.resx">
-      <DependentUpon>202605050400070_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202605060127049_InitialFullCreate.resx">
+      <DependentUpon>202605060127049_InitialFullCreate.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

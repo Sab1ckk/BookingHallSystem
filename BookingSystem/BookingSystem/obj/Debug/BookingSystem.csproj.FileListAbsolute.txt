@@ -31,7 +31,6 @@ C:\Users\timei\source\repos\Sab1ckk\BookingHallSystem\BookingSystem\BookingSyste
 C:\Users\timei\source\repos\Sab1ckk\BookingHallSystem\BookingSystem\BookingSystem\obj\Debug\View\ReportPage.g.cs
 C:\Users\timei\source\repos\Sab1ckk\BookingHallSystem\BookingSystem\BookingSystem\obj\Debug\View\EventsPage.baml
 C:\Users\timei\source\repos\Sab1ckk\BookingHallSystem\BookingSystem\BookingSystem\obj\Debug\View\ReportPage.baml
-C:\Users\timei\source\repos\Sab1ckk\BookingHallSystem\BookingSystem\BookingSystem\obj\Debug\BookingSystem.Migrations.InitialCreate.resources
 C:\Users\timei\source\repos\Sab1ckk\BookingHallSystem\BookingSystem\BookingSystem\obj\Debug\View\EmployeePage.g.cs
 C:\Users\timei\source\repos\Sab1ckk\BookingHallSystem\BookingSystem\BookingSystem\obj\Debug\View\EventTypePage.g.cs
 C:\Users\timei\source\repos\Sab1ckk\BookingHallSystem\BookingSystem\BookingSystem\obj\Debug\View\PositionPage.g.cs
@@ -40,3 +39,4 @@ C:\Users\timei\source\repos\Sab1ckk\BookingHallSystem\BookingSystem\BookingSyste
 C:\Users\timei\source\repos\Sab1ckk\BookingHallSystem\BookingSystem\BookingSystem\obj\Debug\View\EventTypePage.baml
 C:\Users\timei\source\repos\Sab1ckk\BookingHallSystem\BookingSystem\BookingSystem\obj\Debug\View\PositionPage.baml
 C:\Users\timei\source\repos\Sab1ckk\BookingHallSystem\BookingSystem\BookingSystem\obj\Debug\View\RoomPage.baml
+C:\Users\timei\source\repos\Sab1ckk\BookingHallSystem\BookingSystem\BookingSystem\obj\Debug\BookingSystem.Migrations.InitialFullCreate.resources

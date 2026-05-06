@@ -8,7 +8,163 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="PositionPage">
 
-    <Grid>
-        
+    <Page.Resources>
+        <Style x:Key="FieldLabel" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="#64748B"/>
+            <Setter Property="FontSize" Value="12"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Margin" Value="0,0,0,5"/>
+        </Style>
+
+        <Style TargetType="Control" x:Key="ModernInput">
+            <Setter Property="Height" Value="38"/>
+            <Setter Property="Margin" Value="0,0,0,15"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderBrush" Value="#E2E8F0"/>
+            <Setter Property="Padding" Value="8,5"/>
+            <Style.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="6"/>
+                </Style>
+            </Style.Resources>
+        </Style>
+
+        <Style TargetType="DataGrid">
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="RowHeight" Value="45"/>
+            <Setter Property="GridLinesVisibility" Value="None"/>
+            <Setter Property="HeadersVisibility" Value="Column"/>
+            <Style.Resources>
+                <Style TargetType="DataGridColumnHeader">
+                    <Setter Property="Background" Value="Transparent"/>
+                    <Setter Property="Foreground" Value="#94A3B8"/>
+                    <Setter Property="FontWeight" Value="SemiBold"/>
+                    <Setter Property="Padding" Value="10"/>
+                    <Setter Property="BorderThickness" Value="0,0,0,1"/>
+                    <Setter Property="BorderBrush" Value="#F1F5F9"/>
+                </Style>
+                <Style TargetType="DataGridRow">
+                    <Setter Property="Margin" Value="0,2"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="#F8FAFC"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Style.Resources>
+        </Style>
+
+        <Style x:Key="ActionButton" TargetType="Button">
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="btnBorder" Background="{TemplateBinding Background}" CornerRadius="8">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Opacity" Value="0.9"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
+
+    <Grid Background="#F5F7FA">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="350"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- ЛЕВАЯ ПАНЕЛЬ: ФОРМА -->
+        <Border Grid.Column="0" Background="White" Margin="20" CornerRadius="15">
+            <Border.Effect>
+                <DropShadowEffect BlurRadius="15" ShadowDepth="1" Opacity="0.05"/>
+            </Border.Effect>
+
+            <ScrollViewer VerticalScrollBarVisibility="Auto">
+                <StackPanel Margin="25">
+                    <TextBlock Text="Управление должностями" TextWrapping="Wrap" FontSize="20" FontWeight="Bold" Foreground="#1E293B" Margin="0,0,0,25"/>
+
+                    <TextBlock Text="НАЗВАНИЕ ДОЛЖНОСТИ" Style="{StaticResource FieldLabel}"/>
+                    <TextBox Text="{Binding Name}" Style="{StaticResource ModernInput}"/>
+
+                    <TextBlock Text="ОПИСАНИЕ" Style="{StaticResource FieldLabel}"/>
+                    <TextBox Text="{Binding Description}" Style="{StaticResource ModernInput}" Height="80" TextWrapping="Wrap"/>
+
+                    <Button Content="ДОБАВИТЬ" 
+                            Command="{Binding AddCommand}" 
+                            Height="45" 
+                            Background="#1E293B" 
+                            Foreground="White" 
+                            FontWeight="Bold" 
+                            Margin="0,15,0,0"
+                            Style="{StaticResource ActionButton}"/>
+
+                    <Button Content="ОЧИСТИТЬ" 
+                            Command="{Binding ClearCommand}" 
+                            Height="38" 
+                            Background="Transparent" 
+                            Foreground="#64748B" 
+                            FontWeight="Normal" 
+                            Margin="0,10,0,0"
+                            Style="{StaticResource ActionButton}"/>
+                </StackPanel>
+            </ScrollViewer>
+        </Border>
+
+        <!-- ПРАВАЯ ПАНЕЛЬ: ТАБЛИЦА -->
+        <Grid Grid.Column="1" Margin="10,20,20,20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <TextBlock Grid.Row="0" Text="Список должностей" FontSize="24" FontWeight="Bold" Foreground="#1E293B" Margin="10,0,0,20"/>
+
+            <Border Grid.Row="1" Background="White" CornerRadius="15" Padding="15">
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="15" ShadowDepth="1" Opacity="0.05"/>
+                </Border.Effect>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <DataGrid Grid.Row="0"
+                              ItemsSource="{Binding Positions}" 
+                              SelectedItem="{Binding SelectedPosition}"
+                              AutoGenerateColumns="False" 
+                              IsReadOnly="True">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="50"/>
+                            <DataGridTextColumn Header="НАЗВАНИЕ" Binding="{Binding Name}" Width="200"/>
+                            <DataGridTextColumn Header="ОПИСАНИЕ" Binding="{Binding Description}" Width="*"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                    <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="10">
+                        <Button Content="ОБНОВИТЬ" 
+                                Command="{Binding UpdateCommand}" 
+                                Style="{StaticResource ActionButton}"
+                                Background="#1E293B" 
+                                Foreground="White" 
+                                Width="120"
+                                Margin="0,0,10,0"/>
+                        <Button Content="УДАЛИТЬ" 
+                                Command="{Binding DeleteCommand}" 
+                                Style="{StaticResource ActionButton}"
+                                Background="#FFF1F2" 
+                                Foreground="#E11D48" 
+                                Width="120"/>
+                    </StackPanel>
+                </Grid>
+            </Border>
+        </Grid>
     </Grid>
 </Page>
