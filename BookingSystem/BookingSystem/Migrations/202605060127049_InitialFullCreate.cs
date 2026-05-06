@@ -147,7 +147,7 @@
                 (2, 2, 7, '2026-12-25', '18:00:00', '23:59:00'),  
                 (3, 3, 8, '2026-09-18', '13:00:00', '20:00:00');  
                 ");
-            Sql(@"ALTER TABLE Employees ADD FullName AS (lastName + "" "" + FirstName + ISNULL("" "" + Patronymic, """") PERSISTED;");
+            Sql(@"ALTER TABLE Employees ADD FullName AS (lastName + ' ' + FirstName + ISNULL(' ' + Patronymic, '')) PERSISTED;");
             Sql(@"CREATE TRIGGER trg_CheckReservationOverlap
                 ON Reservations
                 AFTER INSERT, UPDATE

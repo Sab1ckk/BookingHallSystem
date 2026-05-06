@@ -10,7 +10,6 @@
         WindowStyle="ThreeDBorderWindow">
 
     <Window.Resources>
-        <!-- Стилизация текстовых полей -->
         <Style x:Key="ModernInput" TargetType="Control">
             <Setter Property="Height" Value="40"/>
             <Setter Property="FontSize" Value="14"/>
@@ -31,7 +30,6 @@
             </Setter>
         </Style>
 
-        <!-- Стиль кнопки "Войти" -->
         <Style x:Key="LoginButtonStyle" TargetType="Button">
             <Setter Property="Background" Value="#1E293B"/>
             <Setter Property="Foreground" Value="White"/>
@@ -57,14 +55,12 @@
         </Style>
     </Window.Resources>
 
-    <!-- Основная карточка входа -->
     <Border Margin="40" Background="White" CornerRadius="20">
         <Border.Effect>
             <DropShadowEffect BlurRadius="30" Direction="0" ShadowDepth="0" Opacity="0.1"/>
         </Border.Effect>
 
         <StackPanel Margin="30" VerticalAlignment="Center">
-            <!-- Заголовок -->
             <TextBlock Text="Вход в систему" 
                        FontSize="24" 
                        FontWeight="Bold" 
@@ -78,14 +74,11 @@
                        HorizontalAlignment="Center" 
                        Margin="0,0,0,30"/>
 
-            <!-- Поля ввода -->
             <TextBlock Text="Логин" Foreground="#64748B" FontWeight="Medium" FontSize="13"/>
             <TextBox x:Name="LoginBox" Style="{StaticResource ModernInput}"/>
 
             <TextBlock Text="Пароль" Foreground="#64748B" FontWeight="Medium" FontSize="13"/>
             <PasswordBox x:Name="PasswordBox" Style="{StaticResource ModernInput}"/>
-
-            <!-- Кнопка -->
             <Button Content="Войти" 
                     Style="{StaticResource LoginButtonStyle}" 
                     Click="LoginButton_Click"/>

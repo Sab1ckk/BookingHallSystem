@@ -82,7 +82,6 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <!-- ЛЕВАЯ ПАНЕЛЬ: ФОРМА -->
         <Border Grid.Column="0" Background="White" Margin="20" CornerRadius="15">
             <Border.Effect>
                 <DropShadowEffect BlurRadius="15" ShadowDepth="1" Opacity="0.05"/>
@@ -131,7 +130,6 @@
             </ScrollViewer>
         </Border>
 
-        <!-- ПРАВАЯ ПАНЕЛЬ: ТАБЛИЦА -->
         <Grid Grid.Column="1" Margin="10,20,20,20">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>

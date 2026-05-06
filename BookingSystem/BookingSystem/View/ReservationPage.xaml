@@ -9,15 +9,12 @@
       Title="CelendarPage">
 
     <Page.Resources>
-        <!-- Стиль заголовков полей -->
         <Style x:Key="FieldLabel" TargetType="TextBlock">
             <Setter Property="Foreground" Value="#64748B"/>
             <Setter Property="FontSize" Value="12"/>
             <Setter Property="FontWeight" Value="SemiBold"/>
             <Setter Property="Margin" Value="0,0,0,5"/>
         </Style>
-
-        <!-- Стиль для полей ввода (TextBox/ComboBox/DatePicker) -->
         <Style TargetType="Control" x:Key="ModernInput">
             <Setter Property="Height" Value="38"/>
             <Setter Property="Margin" Value="0,0,0,15"/>
@@ -31,7 +28,6 @@
             </Style.Resources>
         </Style>
 
-        <!-- Переопределение DataGrid -->
         <Style TargetType="DataGrid">
             <Setter Property="Background" Value="White"/>
             <Setter Property="BorderThickness" Value="0"/>
@@ -85,7 +81,6 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <!-- ЛЕВАЯ ПАНЕЛЬ: ФОРМА -->
         <Border Grid.Column="0" Background="White" Margin="20" CornerRadius="15">
             <Border.Effect>
                 <DropShadowEffect BlurRadius="15" ShadowDepth="1" Opacity="0.05"/>
@@ -150,7 +145,6 @@
             </ScrollViewer>
         </Border>
 
-        <!-- ПРАВАЯ ПАНЕЛЬ: ТАБЛИЦА -->
         <Grid Grid.Column="1" Margin="10,20,20,20">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto"/>
