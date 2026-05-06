@@ -98,15 +98,13 @@
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.Employees", t => t.EmployeeId, cascadeDelete: true)
                 .Index(t => t.EmployeeId);
-            Sql(@"USE BookingSystem;
-                GO
+            Sql(@"
                 INSERT INTO Positions (Name) VALUES 
                 ('Администратор'),
                 ('Менеджер по работе с клиентами'),
                 ('Технический специалист'),
                 ('Руководитель отдела'),
                 ('Координатор мероприятий');
-                GO
                 INSERT INTO EventTypes (Name) VALUES 
                 ('Корпоратив'),
                 ('День рождения'),
@@ -114,7 +112,6 @@
                 ('Семинар'),
                 ('Свадьба'),
                 ('Выставка');
-                GO
                 INSERT INTO Employees (LastName, FirstName, Patronymic, PositionId, ContactInfo) VALUES 
                 ('Иванов', 'Иван', 'Иванович', 1, 'ivanov@example.com; +7-999-123-4567'),
                 ('Петрова', 'Елена', 'Сергеевна', 2, 'petrova@example.com; +7-999-234-5678'),
@@ -122,14 +119,12 @@
                 ('Козлова', 'Мария', 'Андреевна', 4, 'kozlova@example.com; +7-999-456-7890'),
                 ('Смирнов', 'Дмитрий', 'Николаевич', 5, 'smirnov@example.com; +7-999-567-8901'),
                 ('Волкова', 'Анна', 'Павловна', 2, 'volkova@example.com; +7-999-678-9012');
-                GO
                 INSERT INTO Rooms (Name, Capacity) VALUES 
                 ('Зал ""Торжественный""', 150),
                 ('Зал ""Бизнес-класс""', 50),
                 ('Зал ""Презентационный""', 80),
                 ('Конференц-зал ""Лидер""', 120),
                 ('Банкетный зал ""Уют""', 200);
-                GO
                 INSERT INTO Events (Title, ClientCount, EventTypeId) VALUES 
                 ('Годовой корпоратив компании', 120, 1),
                 ('Юбилей Ивана Петрова', 80, 2),
@@ -139,12 +134,10 @@
                 ('Художественная выставка ""Вдохновение""', 60, 6),
                 ('Новогодний корпоратив', 180, 1),
                 ('День рождения компании', 90, 2);
-                GO
                 INSERT INTO Users (EmployeeId, Login, PasswordHash, Role) VALUES 
                 (1, 'admin', '25f43b1486ad95a1398e3eeb3d83bc4010015fcc9bedb35b432e00298d5021f7', 'Admin'),
                 (2, 'elena', '0ce93c9606f0685bf60e051265891d256381f639d05c0aec67c84eec49d33cc1', 'Manager'),
                 (3, 'alexey', '2f38250872acde70afec463d4fffb05def835771ca29b7abe1cb62286944637b', 'Employee');
-                GO
                 INSERT INTO Reservations (RoomId, EmployeeId, EventId, ReservationDate, StartTime, EndTime) VALUES 
                 (1, 1, 1, '2026-05-20', '10:00:00', '18:00:00'),  
                 (2, 2, 3, '2026-06-05', '09:00:00', '17:00:00'),  
@@ -154,21 +147,7 @@
                 (1, 6, 6, '2026-08-01', '10:00:00', '19:00:00'),  
                 (2, 2, 7, '2026-12-25', '18:00:00', '23:59:00'),  
                 (3, 3, 8, '2026-09-18', '13:00:00', '20:00:00');  
-                GO
-                SELECT 'Positions' AS TableName, COUNT(*) AS RecordCount FROM Positions
-                UNION ALL
-                SELECT 'EventTypes', COUNT(*) FROM EventTypes
-                UNION ALL
-                SELECT 'Employees', COUNT(*) FROM Employees
-                UNION ALL
-                SELECT 'Rooms', COUNT(*) FROM Rooms
-                UNION ALL
-                SELECT 'Events', COUNT(*) FROM Events
-                UNION ALL
-                SELECT 'Users', COUNT(*) FROM Users
-                UNION ALL
-                SELECT 'Reservations', COUNT(*) FROM Reservations;
-                GO");
+                ");
         }
         
         public override void Down()
