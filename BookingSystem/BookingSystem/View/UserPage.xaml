@@ -95,7 +95,7 @@
                     <TextBox Text="{Binding Login}" Style="{StaticResource ModernInput}"/>
 
                     <TextBlock Text="ПАРОЛЬ" Style="{StaticResource FieldLabel}"/>
-                    <PasswordBox x:Name="PasswordBox" Style="{StaticResource ModernInput}"/>
+                    <TextBox Text="{Binding Password}"  Style="{StaticResource ModernInput}"/>
 
                     <TextBlock Text="РОЛЬ" Style="{StaticResource FieldLabel}"/>
                     <ComboBox ItemsSource="{Binding Roles}" 

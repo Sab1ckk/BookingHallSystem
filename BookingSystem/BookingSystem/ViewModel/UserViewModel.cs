@@ -16,6 +16,7 @@ namespace BookingSystem.ViewModel
     {
         private readonly SystemModel _db;
         private string _login;
+        private string _password;
         private string _selectedRole;
         private Employees _selectedEmployee;
         private Users _selectedUser;
@@ -30,6 +31,11 @@ namespace BookingSystem.ViewModel
             set { _login = value; OnPropertyChanged(); }
         }
 
+        public string Password
+        {
+            get => _password;
+            set { _password = value; OnPropertyChanged(); }
+        }
         public string SelectedRole
         {
             get => _selectedRole;
@@ -122,14 +128,10 @@ namespace BookingSystem.ViewModel
             if (string.IsNullOrWhiteSpace(Login) || string.IsNullOrWhiteSpace(SelectedRole))
                 return;
 
-            // В реальном приложении нужно получить пароль из PasswordBox
-            string password = "default123"; // Временное решение
-            string passwordHash = HashPassword(password);
-
             var user = new Users
             {
                 Login = Login,
-                PasswordHash = passwordHash,
+                PasswordHash = HashPassword(Password),
                 Role = SelectedRole,
                 EmployeeId = SelectedEmployee?.Id
             };

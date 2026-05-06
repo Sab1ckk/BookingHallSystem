@@ -9,7 +9,7 @@
       Title="CelendarPage">
 
     <Page.Resources>
-        <Style x:Key="FieldLabel" TargetType="TextBlock">
+        <Style x:Key="FieldLabel" TargetType="TextBlock"> 
             <Setter Property="Foreground" Value="#64748B"/>
             <Setter Property="FontSize" Value="12"/>
             <Setter Property="FontWeight" Value="SemiBold"/>
