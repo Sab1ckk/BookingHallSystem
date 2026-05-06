@@ -17,7 +17,6 @@
                         Patronymic = c.String(maxLength: 100),
                         PositionId = c.Int(nullable: false),
                         ContactInfo = c.String(maxLength: 256),
-                        FullName = c.String(nullable: true, maxLength: 302),
                     })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.Positions", t => t.PositionId)
@@ -148,6 +147,27 @@
                 (2, 2, 7, '2026-12-25', '18:00:00', '23:59:00'),  
                 (3, 3, 8, '2026-09-18', '13:00:00', '20:00:00');  
                 ");
+            Sql(@"ALTER TABLE Employees ADD FullName AS (lastName + "" "" + FirstName + ISNULL("" "" + Patronymic, """") PERSISTED;");
+            Sql(@"CREATE TRIGGER trg_CheckReservationOverlap
+                ON Reservations
+                AFTER INSERT, UPDATE
+                AS
+                BEGIN
+                    SET NOCOUNT ON;
+
+                    IF EXISTS (
+                        SELECT 1
+                        FROM Reservations r
+                        JOIN inserted i ON r.RoomId = i.RoomId 
+                            AND r.ReservationDate = i.ReservationDate
+                            AND r.Id <> i.Id -- Не сравниваем запись саму с собой
+                        WHERE i.StartTime < r.EndTime AND i.EndTime > r.StartTime
+                    )
+                    BEGIN
+                        RAISERROR ('Ошибка пересечения времени!', 16, 1);
+                        ROLLBACK TRANSACTION;
+                    END
+                END;");
         }
         
         public override void Down()

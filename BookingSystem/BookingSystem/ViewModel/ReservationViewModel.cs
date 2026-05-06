@@ -89,6 +89,14 @@ namespace BookingSystem.ViewModel
             catch (Exception ex)
             {
                 var inner = ex.InnerException?.InnerException as System.Data.SqlClient.SqlException;
+                var sqlEx = ex.InnerException?.InnerException as System.Data.SqlClient.SqlException
+                ?? ex.InnerException as System.Data.SqlClient.SqlException;
+
+                if (sqlEx != null)
+                {
+                    // Выводим текст ошибки прямо из SQL (например, "Ошибка пересечения времени!")
+                    MessageBox.Show(sqlEx.Message);
+                }
                 if (inner != null && inner.Number == 2627) // Код ошибки Unique Constraint
                 {
                     MessageBox.Show("Вы уже создали бронирование на эту дату. " +
