@@ -17,17 +17,34 @@ using System.Windows.Shapes;
 namespace BookingSystem.View
 {
     /// <summary>
-    /// Логика взаимодействия для LoginWindow.xaml
+    /// Окно авторизации пользователя.
+    /// Предоставляет форму входа с проверкой учетных данных.
     /// </summary>
     public partial class LoginWindow : Window
     {
+        /// <summary>
+        /// Авторизованный пользователь (устанавливается после успешного входа)
+        /// </summary>
         public Users AuthorizedUser { get; private set; }
+
+        /// <summary>
+        /// Контекст базы данных для проверки учетных данных
+        /// </summary>
         private SystemModel _db = new SystemModel();
+
+        /// <summary>
+        /// Конструктор окна входа
+        /// </summary>
         public LoginWindow()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Хеширует пароль с использованием алгоритма SHA256.
+        /// </summary>
+        /// <param name="password">Пароль в открытом виде</param>
+        /// <returns>Хеш пароля в шестнадцатеричном формате</returns>
         private string HashPassword(string password)
         {
             using (SHA256 sha = SHA256.Create())
@@ -45,6 +62,10 @@ namespace BookingSystem.View
             }
         }
 
+        /// <summary>
+        /// Обработчик нажатия кнопки входа.
+        /// Проверяет учетные данные пользователя в базе данных.
+        /// </summary>
         private void LoginButton_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -52,11 +73,12 @@ namespace BookingSystem.View
                 string login = LoginBox.Text;
                 string password = HashPassword(PasswordBox.Password);
 
-                // Здесь ваша логика проверки через БД
+                // Поиск пользователя в БД по логину и хешу пароля
                 Users user = _db.Users.FirstOrDefault(u => u.Login == login && u.PasswordHash == password);
 
                 if (user != null)
                 {
+                    // Успешная авторизация
                     AuthorizedUser = user;
                     this.DialogResult = true; // Закрывает окно и возвращает true
                 }
